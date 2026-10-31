@@ -183,6 +183,36 @@ test("production PWA cached story works after offline reload", async ({
   }
 });
 
+test("fresh launch link clears the saved playthrough", async ({ page }) => {
+  await page.unroute("**/work.json");
+  await page.goto("/");
+  await page.getByRole("button", { name: "轻触解锁" }).waitFor();
+  await page.evaluate(async () => {
+    const database = await new Promise<IDBDatabase>((resolve, reject) => {
+      const request = indexedDB.open("foundphone-studio");
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(request.error);
+    });
+    const saved = await new Promise<{ id: string; state: { time: string } }>(
+      (resolve, reject) => {
+        const request = database.transaction("saves").objectStore("saves").get("wang-heye-phone");
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = () => reject(request.error);
+      },
+    );
+    saved.state.time = "23:59";
+    const transaction = database.transaction("saves", "readwrite");
+    transaction.objectStore("saves").put(saved);
+    await new Promise<void>((resolve, reject) => {
+      transaction.oncomplete = () => resolve();
+      transaction.onerror = () => reject(transaction.error);
+    });
+    database.close();
+  });
+  await page.goto("/?fresh=1&v=story-test");
+  await expect(page.locator(".status-time")).toContainText("03:18");
+  await expect(page).not.toHaveURL(/fresh=1/);
+});
 test("default story Weibo profile uses the account nickname", async ({ page }) => {
   await page.unroute("**/work.json");
   await page.goto("/");

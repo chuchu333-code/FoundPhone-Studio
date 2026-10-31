@@ -276,6 +276,21 @@ function PhoneRuntime({
   useEffect(() => {
     let active = true;
     if (creator || external) return;
+    const freshStart = new URLSearchParams(window.location.search).get("fresh") === "1";
+    if (freshStart) {
+      const url = new URL(window.location.href);
+      url.searchParams.delete("fresh");
+      window.history.replaceState(window.history.state, "", url.pathname + url.search + url.hash);
+      const startFresh = () => {
+        if (!active) return;
+        setOwn(dispatch(work, initialRuntime(work), "start"));
+        setReady(true);
+      };
+      void db.saves.delete(work.id).then(startFresh, startFresh);
+      return () => {
+        active = false;
+      };
+    }
     void db.saves
       .get(work.id)
       .then((saved) => {
