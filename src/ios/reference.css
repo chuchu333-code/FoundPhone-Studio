@@ -29,7 +29,7 @@
 .ios18 .native-settings[data-root="true"] h1 {
   margin: 7px 0 10px;
   line-height: 41px;
-  font-size: 34px;
+  font-size: 36px;
 }
 .ios18 .native-settings .settings-account {
   height: 88px;
@@ -39,10 +39,10 @@
   box-shadow: none;
 }
 .ios18 .native-settings .settings-account strong {
-  font-size: 20px;
+  font-size: 22px;
 }
 .ios18 .native-settings .settings-account small {
-  font-size: 13px;
+  font-size: 15px;
   color: #8e8e93;
 }
 .ios18 .native-settings .settings-account > span {
@@ -72,7 +72,7 @@
   background: #dcdce0;
 }
 .ios18 .native-settings .settings-native-row small {
-  font-size: 17px;
+  font-size: 19px;
   color: #999;
 }
 .ios18 .native-settings > .settings-search {
@@ -120,7 +120,7 @@
   border-bottom: 0.5px solid #e1e1e1;
 }
 .ios18 .wechat-ui .wx-nav strong {
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 600;
 }
 .ios18 .wechat-ui .wx-nav button {
@@ -155,18 +155,18 @@
   border-radius: 5px;
 }
 .ios18 .wechat-ui .wx-chat-row strong {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 25px;
   color: #111;
 }
 .ios18 .wechat-ui .wx-chat-row p {
-  font-size: 14px;
+  font-size: 16px;
   color: #b2b2b2;
   margin-top: 3px;
 }
 .ios18 .wechat-ui .wx-chat-row time {
-  font-size: 11px;
+  font-size: 13px;
   color: #b7b7b7;
   top: 13px;
 }
@@ -185,7 +185,7 @@
 }
 .ios18 .wechat-ui .wx-bottom button {
   gap: 2px;
-  font-size: 11px;
+  font-size: 13px;
   color: #151515;
 }
 .ios18 .wechat-ui .wx-bottom button.selected {
@@ -215,7 +215,7 @@
   min-height: 40px;
   padding: 9px 12px;
   border-radius: 4px;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 23px;
   background: #fff;
   color: #111;
@@ -255,7 +255,7 @@
   gap: 18px;
   border-radius: 0;
   background: #fff;
-  font-size: 17px;
+  font-size: 19px;
   box-shadow: none;
   color: #111;
   border: 0;
@@ -263,7 +263,7 @@
 .ios18 .wechat-ui .wx-discovery > span {
   color: #b7b7b7;
   margin-left: auto;
-  font-size: 27px;
+  font-size: 29px;
   font-weight: 300;
 }
 .ios18 .wechat-ui .wx-discover-groups > .wx-discovery {
@@ -291,11 +291,11 @@
   border-radius: 6px;
 }
 .ios18 .wechat-ui .wx-profile h2 {
-  font-size: 23px;
+  font-size: 25px;
   margin: 2px 0 8px;
 }
 .ios18 .wechat-ui .wx-profile small {
-  font-size: 15px;
+  font-size: 17px;
   color: #999;
 }
 .ios18 .wechat-ui .wx-profile-status {
@@ -306,7 +306,7 @@
   color: #888;
   padding: 3px 8px;
   margin-top: 8px;
-  font-size: 13px;
+  font-size: 15px;
 }
 .ios18 .wechat-ui .wx-profile-menu .wx-discovery {
   position: relative;
@@ -363,7 +363,7 @@
   right: 41px;
   top: 111px;
   margin: 0;
-  font-size: 15px;
+  font-size: 17px;
 }
 .ios18 .device-control .cc-status > span {
   display: flex;
@@ -372,7 +372,7 @@
   opacity: 1;
 }
 .ios18 .device-control .cc-status > span:last-child {
-  font-size: 12px;
+  font-size: 14px;
   opacity: 0.6;
 }
 .ios18 .device-control .cc-grid {
@@ -452,7 +452,7 @@
   justify-content: center;
   gap: 15px;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
 }
 .ios18 .device-control .cc-square {
   border-radius: 50%;
@@ -570,7 +570,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
 }
 .ios18 .cc-current > span {
@@ -586,7 +586,7 @@
   right: 42px;
   display: flex;
   align-items: flex-start;
-  font-size: 15px;
+  font-size: 17px;
 }
 .ios18 .device-control .cc-status > div {
   display: flex;
@@ -601,13 +601,13 @@
   white-space: nowrap;
 }
 .ios18 .device-control .cc-status small {
-  font-size: 9px;
+  font-size: 11px;
   border: 1px solid #fffc;
   border-radius: 2px;
   padding: 0 2px;
 }
 .ios18 .device-control .cc-status > span:last-child {
-  font-size: 15px;
+  font-size: 17px;
   opacity: 1;
   gap: 3px;
 }
@@ -684,12 +684,12 @@
   display: block;
 }
 .ios18 .cc-media-title strong {
-  font-size: 14px;
+  font-size: 16px;
   display: block;
   font-weight: 600;
 }
 .ios18 .device-control .cc-media-title small {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
   opacity: 0.55;
   display: block;

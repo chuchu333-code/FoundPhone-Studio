@@ -36,7 +36,7 @@
   align-items: center;
 }
 .ios18 .status-bar > button {
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: -0.5px;
   font-weight: 600;
 }
@@ -68,7 +68,7 @@
   height: 13px;
   border-radius: 4px;
   border: 1px solid currentColor;
-  font-size: 9px;
+  font-size: 11px;
   line-height: 11px;
   display: block;
 }
@@ -94,7 +94,7 @@
 .ios18 .ios-battery > b {
   position: absolute;
   inset: 0;
-  font-size: 9px;
+  font-size: 11px;
   text-align: center;
   line-height: 11px;
   color: #333;
@@ -177,7 +177,7 @@
   display: block;
 }
 .ios18 .app-name {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   max-width: 80px;
   line-height: 16px;
@@ -210,7 +210,7 @@
   min-height: 28px;
   padding: 5px 12px;
   margin: 4px auto 15px;
-  font-size: 12px;
+  font-size: 14px;
   border-radius: 20px;
   background: #ffffff26;
   backdrop-filter: blur(16px);
@@ -268,12 +268,12 @@
   padding-top: 95px;
 }
 .ios18 .lock-screen > p {
-  font-size: 21px;
+  font-size: 23px;
   font-weight: 500;
   letter-spacing: 0;
 }
 .ios18 .lock-screen > h1 {
-  font-size: 108px;
+  font-size: 110px;
   line-height: 1.1;
   letter-spacing: -6px;
   font-weight: 600;
@@ -312,7 +312,7 @@
   box-shadow: inset 0 1px 2px #fff7;
 }
 .ios18 .unlock-btn {
-  font-size: 13px;
+  font-size: 15px;
   bottom: 18px;
 }
 .ios18 .app-screen {
@@ -347,7 +347,7 @@
   min-height: 44px;
 }
 .ios18 .wechat-ui .wx-nav strong {
-  font-size: 17px;
+  font-size: 19px;
 }
 .ios18 .wechat-ui .wx-search {
   margin: 7px 8px 9px;
@@ -355,7 +355,7 @@
   height: 35px;
 }
 .ios18 .wechat-ui .wx-search input {
-  font-size: 16px;
+  font-size: 18px;
 }
 .ios18 .wechat-ui .wx-chat-row {
   min-height: 73px;
@@ -379,21 +379,21 @@
   border-radius: 6px;
 }
 .ios18 .wechat-ui .wx-chat-row strong {
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 400;
 }
 .ios18 .wechat-ui .wx-chat-row p {
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 5px;
 }
 .ios18 .wechat-ui .wx-chat-row time {
-  font-size: 11px;
+  font-size: 13px;
 }
 .ios18 .wechat-ui .wx-bottom {
   min-height: 53px;
 }
 .ios18 .wechat-ui .wx-bottom button span {
-  font-size: 10px;
+  font-size: 12px;
 }
 .ios18 .wechat-ui .skin-message {
   gap: 10px;
@@ -402,10 +402,10 @@
 .ios18 .wechat-ui .skin-message > .skin-avatar {
   width: 40px;
   height: 40px;
-  font-size: 19px;
+  font-size: 21px;
 }
 .ios18 .wechat-ui .skin-bubble {
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.4;
   padding: 10px 12px;
   max-width: 250px;
@@ -428,10 +428,10 @@
   right: -5px;
 }
 .ios18 .wechat-ui .wx-message-time {
-  display: none;
+  display: flex;
 }
 .ios18 .wechat-ui .skin-date {
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 22px;
   color: #9b9b9b;
 }
@@ -496,7 +496,7 @@
   border: 0;
 }
 .ios18 .catalog-skin[class*="native-"] .catalog-scroll > h1 {
-  font-size: 34px;
+  font-size: 36px;
   margin: 12px 20px 16px;
   letter-spacing: -0.8px;
 }
@@ -504,7 +504,7 @@
   padding: 12px 20px;
 }
 .ios18 .native-messages .message-heading h1 {
-  font-size: 34px;
+  font-size: 36px;
   letter-spacing: -0.8px;
 }
 .ios18 .catalog-skin[class*="native-"] .catalog-search {
@@ -514,7 +514,7 @@
   background: #ebebed;
 }
 .ios18 .catalog-skin[class*="native-"] .catalog-search input {
-  font-size: 17px;
+  font-size: 19px;
   padding: 10px 8px;
 }
 .ios18 .native-messages .catalog-chat {
@@ -527,15 +527,15 @@
   height: 48px;
 }
 .ios18 .native-messages .catalog-chat strong {
-  font-size: 17px;
+  font-size: 19px;
 }
 .ios18 .native-messages .catalog-chat p {
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.3;
   margin-top: 4px;
 }
 .ios18 .native-messages .sms-bubbles .catalog-message > button {
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.35;
   padding: 11px 14px;
   border-radius: 20px;
@@ -568,7 +568,7 @@
     0 2px 10px #0002;
 }
 .ios18 .native-safari .safari-address input {
-  font-size: 16px;
+  font-size: 18px;
 }
 /* Text metrics use the same device-point scale as the shell. */
 .ios18 .ios-battery > b {
@@ -576,33 +576,33 @@
   mix-blend-mode: difference;
 }
 .ios18 .lock-notice strong {
-  font-size: 14px;
+  font-size: 16px;
 }
 .ios18 .lock-notice p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.35;
 }
 .ios18 .lock-notice > small {
-  font-size: 11px;
+  font-size: 13px;
 }
 .ios18 .skin-bubble {
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.4;
   max-width: 278px;
   padding: 10px 12px;
 }
 .ios18 .skin-bubble > small {
-  font-size: 11px;
+  font-size: 13px;
 }
 .ios18 .skin-date {
-  font-size: 12px;
+  font-size: 14px;
 }
 .ios18 .skin-compose {
   min-height: 55px;
   padding: 8px 12px;
 }
 .ios18 .skin-compose > button {
-  font-size: 16px;
+  font-size: 18px;
   min-height: 38px;
 }
 .ios18 .skin-compose > svg {
@@ -610,14 +610,14 @@
   height: 25px;
 }
 .ios18 .wa-large-title {
-  font-size: 34px;
+  font-size: 36px;
   letter-spacing: -0.8px;
 }
 .ios18 .wa-search input {
-  font-size: 17px;
+  font-size: 19px;
 }
 .ios18 .wa-filters > button {
-  font-size: 14px;
+  font-size: 16px;
   padding: 7px 13px;
 }
 .ios18 .wa-chat-row {
@@ -626,14 +626,14 @@
   padding: 12px 16px;
 }
 .ios18 .wa-chat-row strong {
-  font-size: 17px;
+  font-size: 19px;
 }
 .ios18 .wa-chat-row p {
-  font-size: 15px;
+  font-size: 17px;
   margin-top: 5px;
 }
 .ios18 .wa-chat-row time {
-  font-size: 12px;
+  font-size: 14px;
 }
 .ios18 .wa-chat-row .skin-avatar {
   width: 52px;
@@ -643,38 +643,38 @@
   min-height: 52px;
 }
 .ios18 .wa-thread-profile strong {
-  font-size: 17px;
+  font-size: 19px;
 }
 .ios18 .wa-thread-profile small {
-  font-size: 12px;
+  font-size: 14px;
 }
 .ios18 .wa-thread-profile .skin-avatar {
   width: 36px;
   height: 36px;
-  font-size: 17px;
+  font-size: 19px;
 }
 .ios18 .wa-bottom button span {
-  font-size: 10px;
+  font-size: 12px;
 }
 .ios18 .ig-post-author strong {
-  font-size: 14px;
+  font-size: 16px;
 }
 .ios18 .ig-post-caption {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.4;
 }
 .ios18 .ig-post-caption p {
-  font-size: 14px;
+  font-size: 16px;
 }
 .ios18 .ig-post-caption time {
-  font-size: 11px;
+  font-size: 13px;
 }
 .ios18 .ig-post-controls svg {
   width: 25px;
   height: 25px;
 }
 .ios18 .catalog-nav strong {
-  font-size: 17px;
+  font-size: 19px;
 }
 .ios18 .catalog-nav {
   min-height: 44px;
@@ -684,62 +684,62 @@
   padding: 12px 16px;
 }
 .ios18 .catalog-chat strong {
-  font-size: 17px;
+  font-size: 19px;
 }
 .ios18 .catalog-chat p {
-  font-size: 14px;
+  font-size: 16px;
 }
 .ios18 .catalog-chat time {
-  font-size: 11px;
+  font-size: 13px;
 }
 .ios18 .catalog-message > button {
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.4;
 }
 .ios18 .catalog-message > button small {
-  font-size: 11px;
+  font-size: 13px;
 }
 .ios18 .catalog-composer > button {
-  font-size: 16px;
+  font-size: 18px;
 }
 .ios18 .catalog-row {
   min-height: 58px;
 }
 .ios18 .catalog-row strong {
-  font-size: 17px;
+  font-size: 19px;
 }
 .ios18 .catalog-row p {
-  font-size: 14px;
+  font-size: 16px;
 }
 .ios18 .catalog-row small {
-  font-size: 12px;
+  font-size: 14px;
 }
 .ios18 .catalog-tabs {
   min-height: 60px;
 }
 .ios18 .catalog-tabs button {
-  font-size: 10px;
+  font-size: 12px;
 }
 .ios18 .catalog-tabs svg {
   width: 24px;
   height: 24px;
 }
 .ios18 .social-body {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.45;
 }
 .ios18 .calendar-grid button {
-  font-size: 17px;
+  font-size: 19px;
   height: 42px;
 }
 .ios18 .calendar-grid > small {
-  font-size: 12px;
+  font-size: 14px;
 }
 .ios18 .calendar-event strong {
-  font-size: 16px;
+  font-size: 18px;
 }
 .ios18 .native-section {
-  font-size: 13px;
+  font-size: 15px;
 }
 .ios18 .lock-notice > div {
   flex: 1;
@@ -780,14 +780,14 @@
   border: 0;
 }
 .ios18 .lock-screen > h1 {
-  font-size: 96px;
+  font-size: 98px;
   font-weight: 500;
   letter-spacing: -4px;
   color: #fff;
   text-shadow: none;
 }
 .ios18 .lock-screen > p {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 500;
 }
 .ios18 .lock-tools button {
@@ -903,7 +903,7 @@
   height: 18px;
   padding: 0 4px;
   border-radius: 10px;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 400;
   display: grid;
   place-items: center;
@@ -934,7 +934,7 @@
   position: relative;
   padding: 15px 20px;
   text-align: left;
-  font-size: 16px;
+  font-size: 18px;
   width: 100%;
   border-bottom: 0.5px solid #ffffff1c;
 }
@@ -950,6 +950,6 @@
   flex-direction: column;
   align-items: center;
   gap: 7px;
-  font-size: 12px;
+  font-size: 14px;
 }
 

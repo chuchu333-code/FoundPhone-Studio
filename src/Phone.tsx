@@ -134,6 +134,11 @@ function PhoneRuntime({
   onRuntime?: (s: Runtime) => void;
 }) {
   const [app, setApp] = useState("");
+  const [notificationThread, setNotificationThread] = useState("");
+  const [notificationRequest, setNotificationRequest] = useState(0);
+  const pendingNotification = useRef<{ appId: string; thread: string } | null>(
+    null,
+  );
   const [homeRequest, setHomeRequest] = useState(0);
   const [locked, setLocked] = useState(!creator);
   const [pinOpen, setPinOpen] = useState(false);
@@ -346,14 +351,40 @@ function PhoneRuntime({
   };
   const installedApps = work.apps.filter((a) => a.installed);
   const apps = installedApps.filter((a) => a.visible);
+  const routeToNotification = (route: { appId: string; thread: string }) => {
+    setNotificationThread(route.thread);
+    setNotificationRequest((value) => value + 1);
+    open(route.appId);
+  };
   const unlock = (pin = "") => {
     if (!work.phone.passcode || pin === work.phone.passcode) {
       setLocked(false);
       setPinOpen(false);
       event("password", pin);
+      const pending = pendingNotification.current;
+      if (pending) {
+        pendingNotification.current = null;
+        routeToNotification(pending);
+      }
     } else {
       setPinError("密码不正确");
       setPinOpen(true);
+    }
+  };
+  const openNotification = (notice: string) => {
+    const notification = notificationContent(notice, work.apps);
+    const candidate = notification.body.split(/[:：]/, 1)[0].trim();
+    const thread = work.data[notification.appId]?.some(
+      (item) => item.title === candidate,
+    )
+      ? candidate
+      : "";
+    const route = { appId: notification.appId, thread };
+    if (locked) {
+      pendingNotification.current = route;
+      beginUnlock();
+    } else {
+      routeToNotification(route);
     }
   };
   useEffect(() => {
@@ -459,8 +490,12 @@ function PhoneRuntime({
             }
           }}
         >
-          <div className="wallpaper-orb orb-one" />
-          <div className="wallpaper-orb orb-two" />
+          {!safeMedia(work.phone.wallpaper) && (
+            <>
+              <div className="wallpaper-orb orb-one" />
+              <div className="wallpaper-orb orb-two" />
+            </>
+          )}
           <div className="status-bar">
             <button
               onClick={() =>
@@ -499,6 +534,7 @@ function PhoneRuntime({
                 time={displayTime}
                 notices={s.notifications}
                 onDismiss={dismissNotice}
+                onNoticeOpen={openNotification}
                 pinOpen={pinOpen}
                 setPinOpen={setPinOpen}
                 error={pinError}
@@ -528,6 +564,8 @@ function PhoneRuntime({
                   creator={creator}
                   state={s}
                   autoTypingMessage={autoTypingMessage}
+                  notificationThread={notificationThread}
+                  notificationRequest={notificationRequest}
                   onRead={(id) => event("read", id)}
                   onEdit={(item) => onEdit?.(app, item)}
                   onAdd={() => onAdd?.(app)}
@@ -631,11 +669,9 @@ function PhoneRuntime({
                     <SystemNotifications
                       notices={s.notifications}
                       apps={work.apps}
-                      onOpen={() => {
+                      onOpen={(notice) => {
                         setPanel("");
-                        if (locked) beginUnlock();
-                        else if (installedApps.some((a) => a.id === "messages"))
-                          open("messages");
+                        openNotification(notice);
                       }}
                       onDismiss={dismissNotice}
                     />
@@ -769,8 +805,9 @@ function PhoneRuntime({
             <button
               className="device-banner"
               onClick={() => {
+                const notice = banner;
                 setBanner("");
-                setPanel("notification");
+                openNotification(notice);
               }}
             >
               <AppIcon
@@ -953,6 +990,8 @@ function AppContent({
   creator,
   state,
   autoTypingMessage,
+  notificationThread,
+  notificationRequest,
   onRead,
   onEdit,
   onAdd,
@@ -967,6 +1006,8 @@ function AppContent({
   creator: boolean;
   state: Runtime;
   autoTypingMessage: string;
+  notificationThread: string;
+  notificationRequest: number;
   onRead: (id: string) => void;
   onEdit: (item: Item) => void;
   onAdd: () => void;
@@ -983,6 +1024,7 @@ function AppContent({
   const [unlocks, setUnlocks] = useState<string[]>([]);
   const [pwError, setPwError] = useState("");
   const [likes, setLikes] = useState<string[]>([]);
+  const appliedNotificationRequest = useRef(0);
   const shown = items
     .filter((i) => creator || visible(i, state))
     .filter((i) =>
@@ -1002,6 +1044,31 @@ function AppContent({
     setDetail(i);
     if (!i.password || unlocks.includes(i.id)) onRead(i.id);
   };
+  useEffect(() => {
+    if (
+      app.id !== "wechat" ||
+      !notificationThread ||
+      !notificationRequest ||
+      appliedNotificationRequest.current === notificationRequest
+    )
+      return;
+    appliedNotificationRequest.current = notificationRequest;
+    setThread(notificationThread);
+    const latestIncoming = shown
+      .filter(
+        (item) =>
+          item.title === notificationThread && item.sender !== work.phone.owner,
+      )
+      .at(-1);
+    if (latestIncoming) onRead(latestIncoming.id);
+  }, [
+    app.id,
+    notificationThread,
+    notificationRequest,
+    shown,
+    onRead,
+    work.phone.owner,
+  ]);
   const chats = [...new Set(shown.map((i) => i.title))];
   const back = () => {
     if (detail) setDetail(null);

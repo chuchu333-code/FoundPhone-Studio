@@ -33,7 +33,7 @@
 .original-calendar small {
   position: absolute;
   top: 12%;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.1;
   color: #ff3b30;
   font-weight: 600;
@@ -41,7 +41,7 @@
 .original-calendar b {
   position: absolute;
   top: 27%;
-  font-size: 39px;
+  font-size: 41px;
   line-height: 1;
   font-weight: 300;
   letter-spacing: -2px;
@@ -55,10 +55,10 @@
   pointer-events: none;
 }
 .small .original-calendar small {
-  font-size: 5px;
+  font-size: 7px;
 }
 .small .original-calendar b {
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: -1px;
 }
 .original-icon-wrap {
@@ -66,10 +66,10 @@
 }
 .original-calendar small,
 .small .original-calendar small {
-  font-size: 18cqw;
+  font-size: calc(18cqw + 2px);
 }
 .original-calendar b,
 .small .original-calendar b {
-  font-size: 63cqw;
+  font-size: calc(63cqw + 2px);
   letter-spacing: -3cqw;
 }

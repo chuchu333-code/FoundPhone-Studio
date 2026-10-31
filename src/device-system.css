@@ -28,7 +28,7 @@
 }
 .ios18 .status-bar button {
   pointer-events: auto;
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 600;
 }
 .ios18 .dynamic-island {
@@ -90,7 +90,7 @@
   box-shadow: 0 1px 4px #0002;
 }
 .ios18 .app-name {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 15px;
 }
@@ -114,7 +114,7 @@
 }
 .ios18 .home-search {
   margin: 0 auto 17px;
-  font-size: 13px;
+  font-size: 15px;
   padding: 6px 12px;
 }
 .ios18 .home-page-dots {
@@ -181,12 +181,12 @@
   opacity: 0.85;
 }
 .ios18 .lock-clock-block > p {
-  font-size: 21px;
+  font-size: 23px;
   font-weight: 500;
   margin: 0;
 }
 .ios18 .lock-clock-block > h1 {
-  font-size: 100px;
+  font-size: 102px;
   line-height: 1.08;
   font-weight: 600;
   letter-spacing: -4px;
@@ -219,16 +219,16 @@
   min-width: 0;
 }
 .ios18 .lock-notice strong {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
 }
 .ios18 .lock-notice p {
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.3;
   margin: 2px 0 0;
 }
 .ios18 .lock-notice small {
-  font-size: 13px;
+  font-size: 15px;
   white-space: nowrap;
   color: #555;
 }
@@ -253,7 +253,7 @@
   backdrop-filter: none;
   padding: 0;
   white-space: nowrap;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   animation: unlock-hint 3s ease-in-out infinite;
 }
@@ -292,7 +292,7 @@
   margin-bottom: 22px;
 }
 .ios18 .device-passcode h2 {
-  font-size: 21px;
+  font-size: 23px;
   font-weight: 500;
   margin: 0;
 }
@@ -339,12 +339,12 @@
   background: #ffffff75;
 }
 .ios18 .pin-keypad b {
-  font-size: 36px;
+  font-size: 38px;
   line-height: 1;
   font-weight: 400;
 }
 .ios18 .pin-keypad small {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 2px;
   min-height: 12px;
@@ -359,11 +359,11 @@
   justify-content: space-between;
 }
 .ios18 .pin-footer button {
-  font-size: 16px;
+  font-size: 18px;
   color: white;
 }
 .ios18 .pin-error {
-  font-size: 13px;
+  font-size: 15px;
   margin-top: 16px;
   color: white;
 }
@@ -399,7 +399,7 @@
   align-items: center;
 }
 .ios18 .folder-overlay > h2 {
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 400;
   margin: 0 0 36px;
   color: white;
@@ -440,10 +440,10 @@
   top: 63px;
   right: 20px;
   color: white;
-  font-size: 16px;
+  font-size: 18px;
 }
 .ios18 .system-panel h2 {
-  font-size: 32px;
+  font-size: 34px;
   margin: 15px 0 20px;
 }
 .ios18 .system-notice {
@@ -456,7 +456,7 @@
   gap: 10px;
 }
 .ios18 .system-notice p {
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.4;
 }
 .ios18 .system-panel.device-control {
@@ -467,7 +467,7 @@
   display: flex;
   justify-content: space-between;
   margin: 16px 4px 20px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .ios18 .cc-status span {
   opacity: 0.6;
@@ -525,7 +525,7 @@
   text-align: center;
 }
 .ios18 .cc-music small {
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 600;
 }
 .ios18 .cc-music > div {
@@ -591,7 +591,7 @@
 .ios18 .cc-focus {
   grid-column: span 2;
   gap: 10px;
-  font-size: 15px;
+  font-size: 17px;
 }
 .ios18 .cc-dismiss {
   display: flex;
@@ -600,7 +600,7 @@
   bottom: 55px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 14px;
+  font-size: 16px;
   opacity: 0.6;
   white-space: nowrap;
 }
@@ -614,7 +614,7 @@
   box-shadow: 0 20px 50px #0005;
 }
 .ios18 .cc-tool p {
-  font-size: 15px;
+  font-size: 17px;
   margin: 20px 0;
 }
 .ios18 .cc-tool button {
@@ -630,7 +630,7 @@
   color: white;
 }
 .ios18 .device-switcher h2 {
-  font-size: 23px;
+  font-size: 25px;
   font-weight: 500;
 }
 .ios18 .device-switcher > div {
@@ -653,10 +653,10 @@
   box-shadow: 0 15px 40px #0003;
 }
 .ios18 .device-switcher strong {
-  font-size: 22px;
+  font-size: 24px;
 }
 .ios18 .device-switcher span {
-  font-size: 14px;
+  font-size: 16px;
   color: #777;
 }
 .ios18 .home-context-shade {
@@ -685,7 +685,7 @@
   padding: 13px 16px;
   border-top: 0.5px solid #aaa5;
   text-align: left;
-  font-size: 16px;
+  font-size: 18px;
 }
 .ios18 .screen-dimmer {
   position: absolute;
@@ -701,7 +701,7 @@
   min-height: 34px;
   border-radius: 5px;
   background: white;
-  font-size: 16px;
+  font-size: 18px;
   text-align: left;
   padding: 5px 9px;
 }
@@ -741,7 +741,7 @@
   background: white;
   flex: 1;
   min-width: 0;
-  font-size: 17px;
+  font-size: 19px;
   border: 1px solid #ddd;
   border-radius: 17px;
   padding: 5px 12px;
@@ -753,7 +753,7 @@
   justify-content: space-around;
 }
 .ios18 .keyboard-candidates button {
-  font-size: 17px;
+  font-size: 19px;
   flex: 1;
   border-right: 0.5px solid #aaa;
 }
@@ -771,7 +771,7 @@
   min-width: 28px;
   flex: 1;
   max-width: 33px;
-  font-size: 22px;
+  font-size: 24px;
   display: grid;
   place-items: center;
   padding: 0;
@@ -783,13 +783,13 @@
   background: #acb0bb;
   max-width: none;
   flex: 1.25;
-  font-size: 16px;
+  font-size: 18px;
 }
 .ios18 .keyboard-bottom button {
   max-width: none;
   flex: 1.2;
   background: #acb0bb;
-  font-size: 16px;
+  font-size: 18px;
 }
 .ios18 .keyboard-bottom .key-space {
   flex: 5;
@@ -802,7 +802,7 @@
   padding: 3px 22px 12px;
 }
 .ios18 .keyboard-accessories small {
-  font-size: 12px;
+  font-size: 14px;
   color: #666;
 }
 .ios18 .native-settings {
@@ -823,7 +823,7 @@
   justify-content: space-between;
   padding: 0 16px;
   color: #007aff;
-  font-size: 17px;
+  font-size: 19px;
 }
 .ios18 .settings-native-nav button {
   display: flex;
@@ -841,7 +841,7 @@
   scrollbar-width: none;
 }
 .ios18 .settings-native-scroll h1 {
-  font-size: 34px;
+  font-size: 36px;
   font-weight: 700;
   margin: 4px 0 10px;
   letter-spacing: 0.2px;
@@ -861,7 +861,7 @@
   background: none;
   border: 0;
   padding: 0;
-  font-size: 17px;
+  font-size: 19px;
   color: #111;
 }
 .ios18 .settings-account {
@@ -882,19 +882,19 @@
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font-size: 29px;
+  font-size: 31px;
   color: white;
 }
 .ios18 .settings-account > div {
   flex: 1;
 }
 .ios18 .settings-account strong {
-  font-size: 21px;
+  font-size: 23px;
   font-weight: 400;
 }
 .ios18 .settings-account small {
   display: block;
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 3px;
 }
 .ios18 .settings-group {
@@ -915,7 +915,7 @@
   padding: 5px 14px;
   gap: 12px;
   text-align: left;
-  font-size: 17px;
+  font-size: 19px;
 }
 .ios18 .settings-native-row + .settings-native-row:before {
   content: "";
@@ -937,7 +937,7 @@
 }
 .ios18 .settings-native-row > small {
   margin-left: auto;
-  font-size: 16px;
+  font-size: 18px;
   color: #8e8e93;
 }
 .ios18 .settings-native-row > svg,
@@ -946,7 +946,7 @@
 }
 .ios18 .settings-info-row {
   padding: 13px 16px;
-  font-size: 17px;
+  font-size: 19px;
   border-bottom: 0.5px solid #ddd;
 }
 .ios18 .ios-switch {
@@ -978,7 +978,7 @@
 }
 .ios18 .native-settings .record-row {
   background: white;
-  font-size: 17px;
+  font-size: 19px;
   border-radius: 10px;
   padding: 14px;
   margin-bottom: 10px;
@@ -1063,7 +1063,7 @@
   border: 1px solid #ffffff50;
   border-radius: 10px;
   color: white;
-  font-size: 17px;
+  font-size: 19px;
 }
 .ios18 .device-notices {
   width: 100%;
@@ -1114,7 +1114,7 @@
 }
 .ios18 .notice-copy strong {
   display: block;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
   line-height: 19px;
 }
@@ -1123,12 +1123,12 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 19px;
   margin-top: 1px;
 }
 .ios18 .notice-open time {
-  font-size: 12px;
+  font-size: 14px;
   white-space: nowrap;
   color: #555;
 }
@@ -1167,7 +1167,7 @@
   z-index: -2;
 }
 .ios18 .notice-expand {
-  font-size: 13px;
+  font-size: 15px;
   color: white;
   background: #0003;
   border-radius: 20px;
@@ -1195,12 +1195,12 @@
 .ios18 .device-banner > span:last-child {
   flex: 1;
   min-width: 0;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 19px;
 }
 .ios18 .device-banner strong {
   display: block;
-  font-size: 15px;
+  font-size: 17px;
 }
 .ios18 .device-banner > span > span {
   display: block;
@@ -1264,7 +1264,7 @@
   min-height: 30px;
 }
 .ios18 .device-switcher .recent-app-label strong {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
 }
 .ios18 .recent-app-label .app-icon-wrap.small .app-icon {
@@ -1308,7 +1308,7 @@
   margin: 0 auto;
   padding: 12px 20px;
   color: white;
-  font-size: 16px;
+  font-size: 18px;
 }
 .ios18 .skin-settings[data-authoring="true"] > .app-nav {
   display: flex;

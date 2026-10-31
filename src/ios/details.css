@@ -6,7 +6,7 @@
   flex-direction: column;
   background: #fff;
   color: #000;
-  font-size: 17px;
+  font-size: 19px;
   position: relative;
 }
 .ios18 .native-detail > .app-nav {
@@ -27,11 +27,11 @@
   background: none;
   border: 0;
   color: #007aff;
-  font-size: 17px;
+  font-size: 19px;
   padding: 0;
 }
 .ios18 .native-detail > .app-nav strong {
-  font-size: 15px;
+  font-size: 17px;
 }
 .ios18 .native-detail-scroll {
   flex: 1;
@@ -49,12 +49,12 @@
 .ios18 .native-note-paper > time {
   display: block;
   text-align: center;
-  font-size: 13px;
+  font-size: 15px;
   color: #8e8e93;
   margin: 4px 0 20px;
 }
 .ios18 .native-note-paper h1 {
-  font-size: 28px;
+  font-size: 30px;
   line-height: 34px;
   font-weight: 700;
   margin: 0 0 14px;
@@ -81,7 +81,7 @@
   place-items: center;
 }
 .ios18 .native-detail-toolbar > span {
-  font-size: 12px;
+  font-size: 14px;
   color: #8e8e93;
   flex: 1;
   text-align: center;
@@ -103,7 +103,7 @@
   padding: 28px;
   text-align: center;
   color: #d1d1d6;
-  font-size: 15px;
+  font-size: 17px;
 }
 .ios18 .native-contact-hero {
   text-align: center;
@@ -118,10 +118,10 @@
   border-radius: 50%;
   background: #a4a9b1;
   color: #fff;
-  font-size: 44px;
+  font-size: 46px;
 }
 .ios18 .native-contact-hero h1 {
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 500;
   margin: 12px 0;
 }
@@ -141,7 +141,7 @@
   padding: 10px;
   background: #fff;
   color: #007aff;
-  font-size: 13px;
+  font-size: 15px;
 }
 .ios18 .native-detail-contacts,
 .ios18 .native-detail-phone,
@@ -155,7 +155,7 @@
   margin: 10px 0;
 }
 .ios18 .native-detail-group small {
-  font-size: 13px;
+  font-size: 15px;
 }
 .ios18 .native-detail-group p {
   margin: 6px 0;
@@ -165,7 +165,7 @@
   color: #007aff;
 }
 .ios18 .native-event-paper h1 {
-  font-size: 28px;
+  font-size: 30px;
   line-height: 34px;
   margin: 6px 0 12px;
 }
@@ -182,7 +182,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 14px;
+  font-size: 16px;
 }
 .ios18 .native-file-preview {
   display: flex;

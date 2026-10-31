@@ -6,7 +6,7 @@
   flex-direction: column;
   background: #fff;
   color: #0f1419;
-  font-size: 17px;
+  font-size: 19px;
 }
 .ios18 .post-detail-nav {
   display: flex;
@@ -19,7 +19,7 @@
   background: #fff;
 }
 .ios18 .post-detail-nav > strong {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
 }
 .ios18 .post-detail-nav > div {
@@ -62,11 +62,11 @@
 }
 .ios18 .post-detail-author strong {
   display: block;
-  font-size: 17px;
+  font-size: 19px;
 }
 .ios18 .post-detail-author small {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   color: #65737f;
   white-space: nowrap;
   overflow: hidden;
@@ -78,13 +78,13 @@
   border-radius: 20px;
   background: #000;
   color: #fff;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
   padding: 8px 18px;
 }
 .ios18 .post-detail-body {
   padding: 4px 14px 20px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.65;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
@@ -99,7 +99,7 @@
 .ios18 .x-post-metadata {
   margin: 0 14px;
   padding: 0 0 14px;
-  font-size: 14px;
+  font-size: 16px;
   color: #63717c;
 }
 .ios18 .x-post-metadata b {
@@ -122,7 +122,7 @@
   border: 0;
   background: none;
   padding: 0;
-  font-size: 12px;
+  font-size: 14px;
   color: inherit;
 }
 .ios18 .post-detail-actions svg {
@@ -140,7 +140,7 @@
   background: none;
   color: #60707a;
   padding: 0;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
 }
 .ios18 .post-detail-comment {
@@ -160,10 +160,10 @@
   min-width: 0;
 }
 .ios18 .post-detail-comment strong {
-  font-size: 15px;
+  font-size: 17px;
 }
 .ios18 .post-detail-comment p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   margin: 3px 0;
 }
@@ -206,7 +206,7 @@
   padding: 10px 13px;
   min-width: 0;
   flex: 1;
-  font-size: 15px;
+  font-size: 17px;
   color: #111;
   box-shadow: none;
 }
@@ -223,7 +223,7 @@
   padding: 35px 20px;
   text-align: center;
   color: #999;
-  font-size: 14px;
+  font-size: 16px;
 }
 .ios18 .weibo-post-detail {
   color: #222;
@@ -242,7 +242,7 @@
   padding: 5px;
 }
 .ios18 .weibo-post-detail .post-detail-body {
-  font-size: 17px;
+  font-size: 19px;
 }
 .ios18 .weibo-share-options {
   display: flex;
@@ -286,7 +286,7 @@
   background: none;
   color: #999;
   padding: 0;
-  font-size: 15px;
+  font-size: 17px;
 }
 .ios18 .weibo-detail-tabs button[aria-pressed="true"] {
   color: #222;
@@ -309,14 +309,14 @@
   border: 0;
   color: #7b8e9d;
   padding: 0;
-  font-size: 14px;
+  font-size: 16px;
 }
 .ios18 .weibo-bottom-actions .post-detail-actions {
   padding: 10px;
   margin: 0;
 }
 .ios18 .weibo-bottom-actions .post-detail-actions button {
-  font-size: 12px;
+  font-size: 14px;
 }
 .ios18 .weibo-post-detail .post-detail-reply input {
   background: #f4f4f4;
@@ -343,7 +343,7 @@
   border-bottom: 0.5px solid #ddd;
   background: none;
   color: #111;
-  font-size: 15px;
+  font-size: 17px;
 }
 .ios18 .post-detail-body > .rich-body {
   font-size: inherit;

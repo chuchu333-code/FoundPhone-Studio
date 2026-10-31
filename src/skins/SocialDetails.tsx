@@ -125,7 +125,7 @@ export function SocialDetail(p: {
       </header>
       <div className="post-detail-scroll">
         <div className="post-detail-author">
-          <Avatar name={item.sender} src={item.avatar} />
+          <Avatar name={item.sender} src={weibo ? "" : item.avatar} />
           <div>
             <strong>{item.sender || "用户"}</strong>
             <small>

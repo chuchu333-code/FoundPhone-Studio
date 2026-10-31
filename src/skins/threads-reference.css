@@ -42,7 +42,7 @@
   height: 25px;
 }
 .tr-head h1 {
-  font-size: 34px;
+  font-size: 36px;
   letter-spacing: -1px;
   line-height: 1.2;
   margin: 0;
@@ -55,7 +55,7 @@
   margin-left: auto;
 }
 .tr-logo {
-  font-size: 38px;
+  font-size: 40px;
   font-weight: 600;
   line-height: 1;
 }
@@ -86,7 +86,7 @@
   width: 19px;
   height: 19px;
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 16px;
 }
 .tr-post-content {
@@ -99,7 +99,7 @@
   gap: 4px;
 }
 .tr-byline > b {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
 }
 .tr-byline > span {
@@ -228,14 +228,14 @@
 }
 .tr-message small {
   color: #999;
-  font-size: 15px;
+  font-size: 17px;
   margin-top: 3px;
 }
 .tr-message > svg {
   color: #999;
 }
 .tr-section {
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 600;
   margin: 8px 16px;
 }
@@ -294,7 +294,7 @@
 .tr-side header {
   display: flex;
   justify-content: space-between;
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 22px;
 }
 .tr-side-tools {
@@ -338,7 +338,7 @@
   height: 68px;
   padding: 0 16px;
   border-bottom: 0.5px solid #ddd;
-  font-size: 17px;
+  font-size: 19px;
 }
 .tr-compose-content {
   display: flex;
@@ -402,7 +402,7 @@
 .tr-candidates {
   display: flex;
   justify-content: space-between;
-  font-size: 19px;
+  font-size: 21px;
   padding: 3px 4px 13px;
 }
 .tr-key-row {
@@ -418,7 +418,7 @@
   min-width: 30px;
   display: grid;
   place-items: center;
-  font-size: 23px;
+  font-size: 25px;
   box-shadow: 0 1px 1px #bbb;
   padding: 0 4px;
 }
@@ -457,7 +457,7 @@
 }
 .threads-reference .tr-compose-content textarea {
   font-family: inherit;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   box-shadow: none !important;
   border: 0 !important;

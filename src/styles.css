@@ -788,14 +788,14 @@ svg {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  font-size: 10px;
+  font-size: 12px;
   color: inherit;
   pointer-events: none;
 }
 .status-bar > button {
   pointer-events: auto;
   font-weight: 600;
-  font-size: 10px;
+  font-size: 12px;
   padding: 0;
 }
 .dynamic-island {
@@ -822,10 +822,10 @@ svg {
 }
 .signals {
   gap: 3px;
-  font-size: 8px !important;
+  font-size: 10px !important;
 }
 .signals > span {
-  font-size: 7px;
+  font-size: 9px;
 }
 .home-screen {
   height: 100%;
@@ -849,18 +849,18 @@ svg {
   min-height: 126px;
 }
 .home-widget span {
-  font-size: 8px;
+  font-size: 10px;
   color: #e5ebd0;
 }
 .home-widget h2 {
-  font-size: 19px;
+  font-size: 21px;
   line-height: 1.5;
   font-weight: 450;
   letter-spacing: 1px;
   margin-top: 9px;
 }
 .home-widget small {
-  font-size: 7px;
+  font-size: 9px;
   display: block;
   margin-top: 7px;
   color: #e1e9cc;
@@ -872,11 +872,11 @@ svg {
   padding: 5px 0 0 5px;
 }
 .widget-weather strong {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 300;
 }
 .widget-weather small {
-  font-size: 7px;
+  font-size: 9px;
 }
 .home-app-grid {
   display: grid;
@@ -921,7 +921,7 @@ svg {
   border-radius: 8px;
 }
 .app-name {
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 400;
   text-shadow: 0 1px 3px #12361c45;
   line-height: 1.3;
@@ -957,7 +957,7 @@ svg {
   background: #46684c38;
   backdrop-filter: blur(12px);
   color: #ebf2df;
-  font-size: 8px;
+  font-size: 10px;
   padding: 5px 10px;
 }
 .dock {
@@ -1031,13 +1031,13 @@ svg {
   flex-shrink: 0;
 }
 .app-nav strong {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
 }
 .app-nav button {
   padding: 2px;
   min-width: 25px;
-  font-size: 10px;
+  font-size: 12px;
   color: #63776b;
 }
 .phone-screen:has(.app-screen) .status-bar {
@@ -1048,7 +1048,7 @@ svg {
   overflow-y: auto;
   padding: 9px 13px 16px;
   scrollbar-width: thin;
-  font-size: 11px;
+  font-size: 13px;
 }
 .phone-search {
   display: flex;
@@ -1064,7 +1064,7 @@ svg {
   box-shadow: none;
   background: none;
   padding: 7px 6px;
-  font-size: 10px;
+  font-size: 12px;
 }
 .app-tabs {
   display: flex;
@@ -1078,7 +1078,7 @@ svg {
 .app-tabs button {
   flex-direction: column;
   gap: 3px;
-  font-size: 8px;
+  font-size: 10px;
   color: #9ca59a;
   padding: 3px;
 }
@@ -1102,7 +1102,7 @@ svg {
   color: #fff;
   display: grid;
   place-items: center;
-  font-size: 13px;
+  font-size: 15px;
   flex-shrink: 0;
 }
 .contact-row > span:nth-child(2) {
@@ -1111,10 +1111,10 @@ svg {
 }
 .contact-row strong {
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
 }
 .contact-row p {
-  font-size: 9px;
+  font-size: 11px;
   color: #9aa395;
   margin-top: 6px;
   white-space: nowrap;
@@ -1122,7 +1122,7 @@ svg {
   overflow: hidden;
 }
 .contact-row > small {
-  font-size: 8px;
+  font-size: 10px;
   color: #a1aa9a;
 }
 .phone-add {
@@ -1131,7 +1131,7 @@ svg {
   width: 100%;
   padding: 11px;
   margin-top: 15px;
-  font-size: 10px;
+  font-size: 12px;
   color: #8b9e7f;
 }
 .chat-content {
@@ -1143,7 +1143,7 @@ svg {
 }
 .chat-time {
   text-align: center;
-  font-size: 8px;
+  font-size: 10px;
   color: #9aa195;
   margin: 8px 0 20px;
 }
@@ -1160,21 +1160,21 @@ svg {
 .message-row .avatar {
   width: 29px;
   height: 29px;
-  font-size: 11px;
+  font-size: 13px;
 }
 .bubble {
   padding: 9px 10px;
   background: #fff;
   border: 1px solid #dfe4db;
   border-radius: 2px 9px 9px 9px;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.65;
   max-width: 198px;
   white-space: pre-wrap;
   position: relative;
 }
 .bubble small {
-  font-size: 7px;
+  font-size: 9px;
   color: #a5ac9b;
   display: block;
   text-align: right;
@@ -1201,13 +1201,13 @@ svg {
   border-radius: 8px;
   padding: 11px;
   width: 100%;
-  font-size: 10px;
+  font-size: 12px;
   color: #829174;
   margin-top: 20px;
 }
 .muted {
   color: #a0aa95;
-  font-size: 9px;
+  font-size: 11px;
   text-align: center;
 }
 .skin-whatsapp .app-nav,
@@ -1230,7 +1230,7 @@ svg {
 }
 .skin-instagram .app-nav strong {
   font-family: Georgia, serif;
-  font-size: 19px;
+  font-size: 21px;
   font-style: italic;
 }
 .skin-notes .phone-content {
@@ -1240,11 +1240,11 @@ svg {
   padding: 10px 0 20px;
 }
 .media-heading h1 {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 650;
 }
 .media-heading p {
-  font-size: 10px;
+  font-size: 12px;
   color: #9aa393;
   margin-top: 5px;
 }
@@ -1275,7 +1275,7 @@ svg {
 }
 .media-grid button > span {
   display: block;
-  font-size: 9px;
+  font-size: 11px;
   margin: 6px 1px 10px;
   color: #7b8772;
 }
@@ -1304,12 +1304,12 @@ svg {
   opacity: 0.5;
 }
 .original-art span {
-  font-size: 8px;
+  font-size: 10px;
   letter-spacing: 2px;
   z-index: 1;
 }
 .original-art strong {
-  font-size: 31px;
+  font-size: 33px;
   font-family: Georgia, "Microsoft YaHei", serif;
   font-weight: 400;
   letter-spacing: 8px;
@@ -1317,7 +1317,7 @@ svg {
   z-index: 1;
 }
 .original-art small {
-  font-size: 7px;
+  font-size: 9px;
   letter-spacing: 1px;
   z-index: 1;
 }
@@ -1330,7 +1330,7 @@ svg {
 .art-ticket strong {
   font-family: monospace;
   letter-spacing: 1px;
-  font-size: 25px;
+  font-size: 27px;
 }
 .feed-content {
   padding: 0;
@@ -1346,15 +1346,15 @@ svg {
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  font-size: 10px;
+  font-size: 12px;
 }
 .post-author strong {
-  font-size: 10px;
+  font-size: 12px;
 }
 .post-author small {
   display: block;
   color: #a6ab9f;
-  font-size: 8px;
+  font-size: 10px;
   margin-top: 2px;
 }
 .post-author > button {
@@ -1386,7 +1386,7 @@ svg {
   padding: 0;
 }
 .post-actions small {
-  font-size: 8px;
+  font-size: 10px;
   color: #8c9784;
   margin-left: auto;
 }
@@ -1395,7 +1395,7 @@ svg {
   text-align: left;
   padding: 10px 12px 18px;
   line-height: 1.8;
-  font-size: 10px;
+  font-size: 12px;
   width: 100%;
   white-space: pre-wrap;
 }
@@ -1416,11 +1416,11 @@ svg {
   min-width: 0;
 }
 .record-row strong {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
 }
 .record-row p {
-  font-size: 10px;
+  font-size: 12px;
   margin: 6px 0;
   color: #88917f;
   overflow: hidden;
@@ -1429,7 +1429,7 @@ svg {
   max-width: 185px;
 }
 .record-row small {
-  font-size: 8px;
+  font-size: 10px;
   color: #a4ad98;
 }
 .record-symbol {
@@ -1440,7 +1440,7 @@ svg {
   color: #8a9f74;
   display: grid;
   place-items: center;
-  font-size: 14px;
+  font-size: 16px;
   flex-shrink: 0;
 }
 .chevron-right {
@@ -1452,17 +1452,17 @@ svg {
 }
 .detail-meta {
   color: #9aa58e;
-  font-size: 9px;
+  font-size: 11px;
 }
 .detail-content h2 {
-  font-size: 19px;
+  font-size: 21px;
   line-height: 1.5;
   font-weight: 600;
   margin: 12px 0 16px;
 }
 .detail-body {
   line-height: 1.9;
-  font-size: 12px;
+  font-size: 14px;
   white-space: pre-wrap;
   margin: 13px 0;
   overflow-wrap: anywhere;
@@ -1479,14 +1479,14 @@ svg {
   display: flex;
   gap: 4px;
   align-items: center;
-  font-size: 9px;
+  font-size: 11px;
   color: #9ba88d;
   margin-top: 25px;
 }
 .comment {
   padding: 9px;
   background: #eaf0e4;
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 10px;
   border-radius: 5px;
 }
@@ -1499,11 +1499,11 @@ svg {
   color: #a6b49a;
 }
 .empty-app h3 {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
 }
 .empty-app p {
-  font-size: 10px;
+  font-size: 12px;
 }
 .lock-screen {
   height: 100%;
@@ -1514,16 +1514,16 @@ svg {
   align-items: center;
 }
 .lock-screen > p {
-  font-size: 13px;
+  font-size: 15px;
   margin-top: 16px;
 }
 .lock-screen > h1 {
-  font-size: 66px;
+  font-size: 68px;
   font-weight: 300;
   letter-spacing: -3px;
 }
 .lock-owner {
-  font-size: 10px;
+  font-size: 12px;
   color: #e1ebd2;
   margin-top: 5px;
 }
@@ -1541,19 +1541,19 @@ svg {
   margin-top: 67px;
 }
 .lock-notice strong {
-  font-size: 10px;
+  font-size: 12px;
 }
 .lock-notice p {
-  font-size: 9px;
+  font-size: 11px;
   margin-top: 4px;
 }
 .lock-notice > small {
-  font-size: 7px;
+  font-size: 9px;
   margin-left: auto;
 }
 .unlock-btn {
   margin-top: auto;
-  font-size: 11px;
+  font-size: 13px;
   border: 1px solid #ffffff38;
   background: #ffffff12;
   padding: 10px 20px;
@@ -1584,7 +1584,7 @@ svg {
   width: 135px;
   background: #ffffff45;
   border: 1px solid #ffffff38;
-  font-size: 10px;
+  font-size: 12px;
 }
 .unlock-form > button {
   padding: 7px 10px;
@@ -1595,7 +1595,7 @@ svg {
 .unlock-form small {
   width: 100%;
   color: #f8ded9;
-  font-size: 9px;
+  font-size: 11px;
 }
 .folder-overlay {
   position: absolute;
@@ -1609,7 +1609,7 @@ svg {
   padding: 35px 13px;
 }
 .folder-overlay h2 {
-  font-size: 21px;
+  font-size: 23px;
   font-weight: 400;
   margin-bottom: 25px;
 }
@@ -1633,7 +1633,7 @@ svg {
   border-radius: 11px;
 }
 .folder-apps .app-name {
-  font-size: 7px;
+  font-size: 9px;
 }
 .glass-btn {
   margin-top: 20px;
@@ -1641,7 +1641,7 @@ svg {
   border-radius: 15px;
   padding: 8px 15px;
   color: #f5f9eb;
-  font-size: 10px;
+  font-size: 12px;
 }
 .system-panel {
   position: absolute;
@@ -1654,18 +1654,18 @@ svg {
   color: #fff;
 }
 .panel-close {
-  font-size: 10px;
+  font-size: 12px;
   margin-bottom: 22px;
   margin-left: auto;
   display: flex;
 }
 .system-panel h2 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 400;
   margin-bottom: 20px;
 }
 .system-panel > p {
-  font-size: 11px;
+  font-size: 13px;
   color: #c8d5bf;
 }
 .system-notice {
@@ -1677,7 +1677,7 @@ svg {
   border-radius: 11px;
   margin-bottom: 10px;
   line-height: 1.7;
-  font-size: 10px;
+  font-size: 12px;
 }
 .control-grid {
   display: grid;
@@ -1695,10 +1695,10 @@ svg {
   background: #e5f0cd8c;
 }
 .control-grid small {
-  font-size: 9px;
+  font-size: 11px;
 }
 .system-panel label {
-  font-size: 11px;
+  font-size: 13px;
 }
 .system-panel input {
   margin-top: 10px;
@@ -1707,7 +1707,7 @@ svg {
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  font-size: 12px;
+  font-size: 14px;
   padding: 10px 0;
   border-bottom: 1px solid #ffffff20;
 }
@@ -1729,7 +1729,7 @@ svg {
   box-shadow: 0 -10px 40px #21351f1a;
 }
 .story-overlay h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   margin: 12px 0 18px;
 }
@@ -1742,7 +1742,7 @@ svg {
   padding: 12px;
   border-radius: 9px;
   margin-top: 10px;
-  font-size: 11px;
+  font-size: 13px;
 }
 .ending {
   top: 100px;
@@ -1753,13 +1753,13 @@ svg {
   padding: 25px;
 }
 .ending h2 {
-  font-size: 23px;
+  font-size: 25px;
   font-weight: 500;
   line-height: 1.6;
   margin: 22px 0;
 }
 .ending p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 2;
 }
 .ending button {
@@ -1771,7 +1771,7 @@ svg {
   bottom: 22px;
   background: #735a40e8;
   color: white;
-  font-size: 9px;
+  font-size: 11px;
   left: 10px;
   right: 10px;
   padding: 8px;
@@ -1790,17 +1790,17 @@ svg {
   background: #c5d2bc;
   display: grid;
   place-items: center;
-  font-size: 20px;
+  font-size: 22px;
   color: #fff;
 }
 .settings-profile h3 {
-  font-size: 15px;
+  font-size: 17px;
   margin-bottom: 6px;
   font-weight: 500;
 }
 .settings-profile small {
   color: #9ca791;
-  font-size: 9px;
+  font-size: 11px;
 }
 .settings-list {
   border-radius: 9px;
@@ -1815,10 +1815,10 @@ svg {
   justify-content: space-between;
   padding: 12px 0;
   border-bottom: 1px solid #edf0e6;
-  font-size: 11px;
+  font-size: 13px;
 }
 .settings-list span {
-  font-size: 10px;
+  font-size: 12px;
   color: #9ba68e;
 }
 .locked-note {
@@ -1830,7 +1830,7 @@ svg {
   color: #8e9e7d;
 }
 .locked-note h3 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
 }
 .locked-note button {
@@ -1850,7 +1850,7 @@ svg {
   color: #fff;
 }
 .calculator output {
-  font-size: 42px;
+  font-size: 44px;
   text-align: right;
   margin: auto 0 20px;
   overflow: hidden;
@@ -1864,14 +1864,14 @@ svg {
   height: 50px;
   background: #444d41;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 22px;
 }
 .calculator button:nth-child(4n),
 .calculator button:last-child {
   background: #c09350;
 }
 .calculator button:first-child {
-  font-size: 15px;
+  font-size: 17px;
 }
 .calculator button:nth-last-child(3) {
   grid-column: span 2;
@@ -1922,11 +1922,11 @@ svg {
   border-radius: 5px;
   padding: 10px;
   color: white;
-  font-size: 19px;
+  font-size: 21px;
 }
 .transfer small {
   color: #fff;
-  font-size: 8px;
+  font-size: 10px;
 }
 .modal-backdrop {
   position: fixed;
@@ -1960,7 +1960,7 @@ svg {
   border-bottom: 1px solid var(--line);
 }
 .modal h2 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 500;
   letter-spacing: 0.5px;
   margin-top: 9px;
@@ -2641,7 +2641,7 @@ label {
     margin-bottom: 28px;
   }
   .home-widget h2 {
-    font-size: 21px;
+    font-size: 23px;
   }
   .home-screen {
     padding-top: 65px;
@@ -3040,7 +3040,7 @@ label {
     min-height: 120px;
   }
   .home-widget h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
   .app-icon {
     width: 44px;
@@ -3110,14 +3110,14 @@ label {
   overflow: auto;
 }
 .calc-records > small {
-  font-size: 8px;
+  font-size: 10px;
   color: #bac7af;
 }
 .calculator .calc-records button {
   display: block;
   width: 100%;
   height: auto;
-  font-size: 10px;
+  font-size: 12px;
   border-radius: 4px;
   padding: 7px;
   text-align: left;
@@ -3744,7 +3744,7 @@ label {
 }
 .home-search {
   margin: 12px auto 15px;
-  font-size: 9px;
+  font-size: 11px;
 }
 .status-bar {
   height: 46px;
@@ -3812,7 +3812,7 @@ label {
   display: grid;
   place-items: center;
   color: #fff;
-  font-size: 19px;
+  font-size: 21px;
   flex-shrink: 0;
 }
 .skin-avatar.round {
@@ -3825,7 +3825,7 @@ label {
   min-height: 43px;
 }
 .wx-nav strong {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
 }
 .wx-nav button {
@@ -3847,7 +3847,7 @@ label {
   border: 0;
   box-shadow: none;
   background: none;
-  font-size: 12px;
+  font-size: 14px;
   padding: 7px 0;
 }
 .wechat-ui .skin-scroll {
@@ -3869,11 +3869,11 @@ label {
   min-width: 0;
 }
 .wx-chat-row strong {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
 }
 .wx-chat-row p {
-  font-size: 11px;
+  font-size: 13px;
   color: #999;
   margin-top: 7px;
   overflow: hidden;
@@ -3884,15 +3884,15 @@ label {
   align-self: flex-start;
   margin-top: 2px;
   color: #aaa;
-  font-size: 9px;
+  font-size: 11px;
 }
 .wx-section-label {
   padding: 12px 15px 8px;
-  font-size: 11px;
+  font-size: 13px;
   color: #888;
 }
 .wx-contact {
-  font-size: 14px;
+  font-size: 16px;
 }
 .wx-discovery {
   display: flex;
@@ -3901,7 +3901,7 @@ label {
   width: 100%;
   padding: 18px 17px;
   background: #fff;
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 12px;
   text-align: left;
 }
@@ -3924,13 +3924,13 @@ label {
   height: 55px;
 }
 .wx-profile h2 {
-  font-size: 20px;
+  font-size: 22px;
 }
 .wx-profile small {
   display: block;
   color: #aaa;
   margin-top: 9px;
-  font-size: 11px;
+  font-size: 13px;
 }
 .wx-bottom,
 .wa-bottom,
@@ -3953,7 +3953,7 @@ label {
 }
 .wx-bottom button span,
 .wa-bottom button span {
-  font-size: 9px;
+  font-size: 11px;
 }
 .wx-bottom button.selected {
   color: #07a45b;
@@ -3968,7 +3968,7 @@ label {
 .skin-date {
   text-align: center;
   color: #aaa;
-  font-size: 9px;
+  font-size: 11px;
   margin: 2px 0 24px;
 }
 .skin-message {
@@ -3980,7 +3980,7 @@ label {
 .skin-message > .skin-avatar {
   width: 33px;
   height: 33px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .skin-bubble {
   background: #fff;
@@ -3988,7 +3988,7 @@ label {
   padding: 9px 10px;
   white-space: pre-wrap;
   line-height: 1.65;
-  font-size: 12px;
+  font-size: 14px;
   max-width: 218px;
   display: block;
   text-align: left;
@@ -4001,7 +4001,7 @@ label {
   align-items: center;
   gap: 4px;
   margin-top: 4px;
-  font-size: 8px;
+  font-size: 10px;
   color: #929c8a;
 }
 .skin-message.outgoing {
@@ -4026,11 +4026,11 @@ label {
   color: #fff;
   padding: 12px;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 22px;
 }
 .skin-transfer small {
   display: block;
-  font-size: 8px;
+  font-size: 10px;
   margin-top: 4px;
 }
 .skin-compose {
@@ -4048,7 +4048,7 @@ label {
   border-radius: 5px;
   min-height: 31px;
   flex: 1;
-  font-size: 11px;
+  font-size: 13px;
   color: #aaa;
   justify-content: flex-start;
   padding: 0 9px;
@@ -4069,7 +4069,7 @@ label {
   color: #fff;
 }
 .wx-moment-cover span {
-  font-size: 16px;
+  font-size: 18px;
 }
 .wx-moment-post {
   display: flex;
@@ -4085,18 +4085,18 @@ label {
 }
 .wx-moment-post strong {
   color: #61769a;
-  font-size: 12px;
+  font-size: 14px;
 }
 .wx-moment-post p {
   color: #000;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.8;
   margin-top: 8px;
   white-space: pre-wrap;
 }
 .wx-moment-post small {
   color: #aaa;
-  font-size: 9px;
+  font-size: 11px;
   display: block;
   margin-top: 10px;
 }
@@ -4108,7 +4108,7 @@ label {
   padding: 35px 20px;
   text-align: center;
   color: #aaa;
-  font-size: 12px;
+  font-size: 14px;
 }
 .whatsapp-ui {
   background: #fff;
@@ -4119,13 +4119,13 @@ label {
   padding-top: 4px;
 }
 .wa-nav strong {
-  font-size: 15px;
+  font-size: 17px;
 }
 .wa-nav button {
   color: #168b53;
 }
 .wa-large-title {
-  font-size: 29px;
+  font-size: 31px;
   font-weight: 700;
   padding: 12px 16px 10px;
   color: #111;
@@ -4146,7 +4146,7 @@ label {
   box-shadow: none;
   border: 0;
   padding: 9px 0;
-  font-size: 12px;
+  font-size: 14px;
 }
 .wa-filters {
   display: flex;
@@ -4154,7 +4154,7 @@ label {
   padding: 13px 14px;
 }
 .wa-filters > button {
-  font-size: 11px;
+  font-size: 13px;
   background: #f2f2f2;
   padding: 5px 12px;
   border-radius: 15px;
@@ -4179,13 +4179,13 @@ label {
   padding-bottom: 13px;
 }
 .wa-chat-row strong {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
 }
 .wa-chat-row p {
   display: flex;
   align-items: center;
-  font-size: 11px;
+  font-size: 13px;
   color: #929292;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -4193,7 +4193,7 @@ label {
   margin-top: 7px;
 }
 .wa-chat-row time {
-  font-size: 9px;
+  font-size: 11px;
   color: #a0a0a0;
   align-self: flex-start;
   margin-top: 3px;
@@ -4223,16 +4223,16 @@ label {
 .wa-thread-profile .skin-avatar {
   width: 31px;
   height: 31px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .wa-thread-profile > div {
   flex: 1;
 }
 .wa-thread-profile strong {
-  font-size: 12px;
+  font-size: 14px;
 }
 .wa-thread-profile small {
-  font-size: 9px;
+  font-size: 11px;
   color: #999;
   display: block;
   margin-top: 3px;
@@ -4271,7 +4271,7 @@ label {
   padding: 15px;
   width: 100%;
   text-align: left;
-  font-size: 13px;
+  font-size: 15px;
   border-bottom: 1px solid #eee;
 }
 .wa-status > button,
@@ -4283,7 +4283,7 @@ label {
   min-width: 0;
 }
 .wa-record p {
-  font-size: 10px;
+  font-size: 12px;
   color: #999;
   margin-top: 6px;
   line-height: 1.7;
@@ -4296,7 +4296,7 @@ label {
   background: #f5f5f6;
 }
 .wa-settings-profile h2 {
-  font-size: 17px;
+  font-size: 19px;
 }
 .instagram-ui {
   background: #fff;
@@ -4345,7 +4345,7 @@ label {
 .ig-story .skin-avatar {
   width: 47px;
   height: 47px;
-  font-size: 19px;
+  font-size: 21px;
 }
 .ig-story small {
   font-size: 9px;
@@ -4362,7 +4362,7 @@ label {
 .ig-post-author .skin-avatar {
   width: 26px;
   height: 26px;
-  font-size: 11px;
+  font-size: 13px;
 }
 .ig-post-author strong {
   font-size: 11px;
@@ -4407,7 +4407,7 @@ label {
 .skin-photo span {
   z-index: 1;
   font-family: serif;
-  font-size: 23px;
+  font-size: 25px;
   font-weight: 300;
   letter-spacing: 2px;
   padding: 20px;
@@ -4493,7 +4493,7 @@ label {
   object-fit: cover;
 }
 .ig-explore .skin-photo span {
-  font-size: 11px;
+  font-size: 13px;
   padding: 8px;
 }
 .ig-profile {
@@ -4506,7 +4506,7 @@ label {
 .ig-profile > .skin-avatar {
   width: 64px;
   height: 64px;
-  font-size: 25px;
+  font-size: 27px;
   margin-right: 9px;
 }
 .ig-profile > div {
@@ -4708,7 +4708,7 @@ label {
   }
   .skin-bubble {
     max-width: 200px;
-    font-size: 11px;
+    font-size: 13px;
   }
   .skin-avatar {
     width: 38px;
@@ -4716,7 +4716,7 @@ label {
   }
   .wx-chat-row strong,
   .wa-chat-row strong {
-    font-size: 13px;
+    font-size: 15px;
   }
 }
 @media (max-width: 420px) {
@@ -4754,7 +4754,7 @@ label {
     padding-right: 10px;
   }
   .wa-large-title {
-    font-size: 26px;
+    font-size: 28px;
   }
   .library-app {
     padding: 10px 8px;
@@ -4790,7 +4790,7 @@ label {
   margin-top: auto;
 }
 .lock-screen:has(.pin-keypad) > h1 {
-  font-size: 58px;
+  font-size: 60px;
 }
 .stage-heading > div:first-child {
   margin-right: auto;
@@ -4912,7 +4912,7 @@ label {
   background: #17252ee8;
   box-shadow: 0 8px 28px #0004;
   color: #fff;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 1.65;
   text-align: center;
@@ -4947,3 +4947,5 @@ label {
   background: #e34f58;
   transform: rotate(135deg);
 }
+.phone-screen { font-size: 15px; }
+.phone-screen :where(small:not([class])) { font-size: 13px; }

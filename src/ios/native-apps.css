@@ -71,7 +71,7 @@
   background: linear-gradient(135deg, #303030, #353535);
   box-shadow: inset 0 1px 1px #ffffff20;
   color: #fff;
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 400;
   line-height: 1;
 }
@@ -80,7 +80,7 @@
 }
 .ios18 .calc-keypad > .calc-operator {
   background: #ff9500;
-  font-size: 49px;
+  font-size: 51px;
   font-weight: 300;
 }
 .ios18 .calc-keypad > .calc-selected {
@@ -113,7 +113,7 @@
   border: 0;
   background: none;
   color: #ff9500;
-  font-size: 16px;
+  font-size: 18px;
   padding: 0;
 }
 .ios18 .calc-history-list {
@@ -129,7 +129,7 @@
   padding: 17px 8px;
   background: none;
   text-align: right;
-  font-size: 22px;
+  font-size: 24px;
 }
 .ios18 .calc-history-list > p {
   color: #888;
@@ -143,7 +143,7 @@
   padding: 20px;
   border: 0;
   border-radius: 15px;
-  font-size: 20px;
+  font-size: 22px;
 }
 .ios18 .calibrated-health {
   background: #f2f1f7;
@@ -168,7 +168,7 @@
   left: 65px;
   right: 65px;
   text-align: center;
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 600;
   pointer-events: none;
 }
@@ -204,14 +204,14 @@
   height: 48px;
 }
 .ios18 .health-section-title h2 {
-  font-size: 23px;
+  font-size: 25px;
   margin: 0;
 }
 .ios18 .health-section-title button {
   color: #007aff;
   background: none;
   border: 0;
-  font-size: 17px;
+  font-size: 19px;
   padding: 0;
 }
 .ios18 .health-cards {
@@ -239,7 +239,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 15px;
+  font-size: 17px;
   position: static;
   min-height: 0;
   padding: 0;
@@ -247,11 +247,11 @@
   border: 0;
 }
 .ios18 .health-native-card header strong {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
 }
 .ios18 .health-native-card header time {
-  font-size: 13px;
+  font-size: 15px;
   color: #999;
   margin-left: auto;
 }
@@ -264,12 +264,12 @@
   justify-content: space-between;
 }
 .ios18 .health-card-bottom b {
-  font-size: 25px;
+  font-size: 27px;
   font-weight: 600;
   line-height: 1.2;
 }
 .ios18 .health-card-bottom span {
-  font-size: 16px;
+  font-size: 18px;
   color: #999;
   margin-left: 4px;
 }
@@ -285,7 +285,7 @@
   flex: 1;
 }
 .ios18 .health-activity-values small {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
 }
 .ios18 .health-activity-values p {
@@ -294,10 +294,10 @@
   color: #111;
 }
 .ios18 .health-activity-values b {
-  font-size: 19px;
+  font-size: 21px;
 }
 .ios18 .health-activity-values span {
-  font-size: 11px;
+  font-size: 13px;
   color: #999;
 }
 .ios18 .activity-rings {
@@ -346,7 +346,7 @@
   padding: 17px;
   margin: 20px 0;
   color: #111;
-  font-size: 18px;
+  font-size: 20px;
   text-align: left;
 }
 .ios18 .health-all-row > svg:last-child {
@@ -354,7 +354,7 @@
   color: #ccc;
 }
 .ios18 .health-trends-title {
-  font-size: 23px;
+  font-size: 25px;
   margin: 30px 16px 14px;
 }
 .ios18 .health-trends-empty {
@@ -389,7 +389,7 @@
   border: 0;
   border-radius: 30px;
   color: #111;
-  font-size: 11px;
+  font-size: 13px;
   padding: 0;
 }
 .ios18 .health-floating-tabs > .selected {
@@ -413,7 +413,7 @@
   flex-direction: row;
   align-items: center;
   gap: 5px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .ios18 .health-browse-row {
   display: flex;
@@ -425,7 +425,7 @@
   border-bottom: 0.5px solid #ddd;
   padding: 17px;
   color: #111;
-  font-size: 18px;
+  font-size: 20px;
 }
 .ios18 .health-browse-row > svg:last-child {
   margin-left: auto;
@@ -444,19 +444,19 @@
   background: none;
   border-radius: 6px;
   padding: 6px 0;
-  font-size: 13px;
+  font-size: 15px;
   color: #111;
 }
 .ios18 .health-periods button[data-selected="true"] {
   background: #fff;
 }
 .ios18 .health-detail-value {
-  font-size: 34px;
+  font-size: 36px;
   font-weight: 600;
   margin: 20px 8px;
 }
 .ios18 .health-detail-value small {
-  font-size: 15px;
+  font-size: 17px;
   color: #999;
 }
 .ios18 .health-detail-chart {
@@ -535,17 +535,17 @@
   flex-direction: column;
 }
 .ios18 .weather-native-current > small {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
 }
 .ios18 .weather-native-current > h1 {
-  font-size: 34px;
+  font-size: 36px;
   font-weight: 400;
   margin: 3px 0 0;
   line-height: 43px;
 }
 .ios18 .weather-native-current > output {
-  font-size: 100px;
+  font-size: 102px;
   font-weight: 200;
   line-height: 105px;
   letter-spacing: -5px;
@@ -553,11 +553,11 @@
 .ios18 .weather-high-low {
   display: flex;
   gap: 10px;
-  font-size: 26px;
+  font-size: 28px;
   letter-spacing: -0.5px;
 }
 .ios18 .weather-native-current > p {
-  font-size: 20px;
+  font-size: 22px;
   margin: 4px 0;
 }
 .ios18 .weather-moon-art {
@@ -581,11 +581,11 @@
   box-shadow: none;
 }
 .ios18 .weather-air-quality > strong {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
 }
 .ios18 .weather-air-quality > p {
-  font-size: 13px;
+  font-size: 15px;
   margin: 8px 0 0;
 }
 .ios18 .weather-aqi-scale {
@@ -623,12 +623,12 @@
 }
 .ios18 .weather-hourly header strong {
   display: block;
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 500;
 }
 .ios18 .weather-hourly header small {
   display: block;
-  font-size: 12px;
+  font-size: 14px;
   opacity: 0.65;
 }
 .ios18 .weather-mode-switch {
@@ -666,11 +666,11 @@
   color: #fff;
 }
 .ios18 .weather-hour-grid strong {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
 }
 .ios18 .weather-hour-grid span {
-  font-size: 15px;
+  font-size: 17px;
 }
 .ios18 .weather-hour-grid svg {
   fill: #fff1;
@@ -687,7 +687,7 @@
   border: 0;
   border-bottom: 0.5px solid #ffffff2a;
   color: white;
-  font-size: 17px;
+  font-size: 19px;
 }
 .ios18 .weather-days > button > i {
   display: block;
@@ -774,7 +774,7 @@
   background: none;
   color: white;
   padding: 0;
-  font-size: 16px;
+  font-size: 18px;
 }
 .ios18 .weather-city-search {
   display: flex;
@@ -792,7 +792,7 @@
   background: none;
   color: white;
   padding: 0;
-  font-size: 17px;
+  font-size: 19px;
 }
 .ios18 .weather-city-row {
   display: flex;
@@ -805,7 +805,7 @@
   border-radius: 20px;
   margin: 15px 0;
   padding: 25px;
-  font-size: 22px;
+  font-size: 24px;
 }
 .ios18 .weather-map-empty {
   display: flex;
@@ -816,7 +816,7 @@
 }
 .ios18 .weather-section-detail {
   padding: 25px 8px;
-  font-size: 18px;
+  font-size: 20px;
 }
 .ios18 .calibrated-health,
 .ios18 .calibrated-weather {

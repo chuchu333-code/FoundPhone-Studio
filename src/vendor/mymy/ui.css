@@ -28,7 +28,7 @@
     cursive;
 }
 .mymy-ui .igh .un {
-  font-size: 20px;
+  font-size: 22px;
 }
 .mymy-ui .igb {
   flex: 1;
@@ -48,7 +48,7 @@
 }
 .mymy-ui .st small {
   display: block;
-  font-size: 11px;
+  font-size: 13px;
   margin-top: 4px;
   white-space: nowrap;
   overflow: hidden;
@@ -78,7 +78,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
+  font-size: 32px;
 }
 .mymy-ui .sr i {
   position: absolute;
@@ -93,7 +93,7 @@
   text-align: center;
   line-height: 22px;
   border: 2px solid #fff;
-  font-size: 15px;
+  font-size: 17px;
 }
 .mymy-ui .igp {
   padding-bottom: 10px;
@@ -112,7 +112,7 @@
 }
 .mymy-ui .igph div {
   flex: 1;
-  font-size: 14px;
+  font-size: 16px;
 }
 .mymy-ui .iga {
   display: flex;
@@ -122,11 +122,11 @@
 }
 .mymy-ui .igc {
   padding: 2px 14px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .mymy-ui .igt {
   padding: 2px 14px;
-  font-size: 12px;
+  font-size: 14px;
   color: #889;
 }
 .mymy-ui .pf {
@@ -148,14 +148,14 @@
 }
 .mymy-ui .ps b {
   display: block;
-  font-size: 17px;
+  font-size: 19px;
 }
 .mymy-ui .ps small {
-  font-size: 13px;
+  font-size: 15px;
 }
 .mymy-ui .pn {
   padding: 2px 16px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .mymy-ui .ptab {
   display: flex;
@@ -191,7 +191,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
+  font-size: 30px;
   padding-bottom: 3px;
   cursor: pointer;
   background: #fff;
@@ -206,11 +206,11 @@
 }
 .mymy-ui .igpn b {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
 }
 .mymy-ui .igpn small {
   display: block;
-  font-size: 11px;
+  font-size: 13px;
   color: #444;
   white-space: nowrap;
   overflow: hidden;
@@ -229,7 +229,7 @@
   gap: 6px;
 }
 .mymy-ui .iga b {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 600;
 }
 .mymy-ui .igph .av2 {
@@ -239,10 +239,10 @@
   object-fit: cover;
 }
 .mymy-ui .igpn b {
-  font-size: 13px;
+  font-size: 15px;
 }
 .mymy-ui .igpn small {
-  font-size: 10.5px;
+  font-size: 12.5px;
 }
 .mymy-ui .igph {
   padding: 8px 14px;
@@ -260,7 +260,7 @@
   height: 26px;
 }
 .mymy-ui .iga b {
-  font-size: 13px;
+  font-size: 15px;
 }
 .mymy-ui .iga {
   gap: 12px;
@@ -270,18 +270,18 @@
   align-items: center;
   gap: 6px;
   padding: 4px 14px 0;
-  font-size: 12.5px;
+  font-size: 14.5px;
 }
 .mymy-ui .igc {
-  font-size: 12.5px;
+  font-size: 14.5px;
   padding-top: 2px;
 }
 .mymy-ui .igt {
-  font-size: 11px;
+  font-size: 13px;
 }
 .mymy-ui .cmall {
   padding: 2px 14px;
-  font-size: 12.5px;
+  font-size: 14.5px;
   color: #889;
 }
 .mymy-ui .cmb2 {
@@ -302,7 +302,7 @@
   flex: 1;
   border: 0;
   outline: 0;
-  font-size: 14px;
+  font-size: 16px;
   background: transparent;
   color: #111;
   min-width: 0;
@@ -312,7 +312,7 @@
   background: none;
   color: #3b5bff;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
 }
 .mymy-ui .carw {
@@ -346,11 +346,11 @@
   gap: 9px;
 }
 .mymy-ui .kzhl b {
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 700;
 }
 .mymy-ui .kzti {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
 }
 .mymy-ui .kzic {
@@ -374,7 +374,7 @@
   padding: 0 16px;
   border-radius: 17px;
   background: #f1f1f3;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: #555;
 }
@@ -403,7 +403,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 16px 8px;
-  font-size: 13.5px;
+  font-size: 15.5px;
   font-weight: 700;
 }
 .mymy-ui .kzkr {
@@ -424,13 +424,13 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
 }
 .mymy-ui .kzkn small {
   display: block;
   margin-top: 2px;
-  font-size: 12px;
+  font-size: 14px;
   color: #8a8a90;
   white-space: nowrap;
   overflow: hidden;
@@ -441,7 +441,7 @@
   flex-direction: column;
   align-items: flex-end;
   gap: 6px;
-  font-size: 11.5px;
+  font-size: 13.5px;
   color: #999;
   flex: none;
 }
@@ -449,7 +449,7 @@
   background: #f0562f;
   color: #fff;
   font-style: normal;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   min-width: 19px;
   height: 19px;
@@ -487,7 +487,7 @@
   top: -8px;
   left: 15px;
   border: 2px solid #fff;
-  font-size: 10px;
+  font-size: 12px;
 }
 .mymy-ui .kzth {
   display: flex;
@@ -499,7 +499,7 @@
 }
 .mymy-ui .kzname {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
 }
 .mymy-ui .kzpill {
   display: flex;
@@ -513,7 +513,7 @@
   cursor: pointer;
 }
 .mymy-ui .kzpill b {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
 }
 .mymy-ui .kzm {
@@ -538,7 +538,7 @@
 .mymy-ui .kzbub {
   padding: 8px 11px;
   border-radius: 12px;
-  font-size: 14.5px;
+  font-size: 16.5px;
   line-height: 1.35;
   word-break: break-word;
   position: relative;
@@ -565,13 +565,13 @@
   display: none;
 }
 .mymy-ui .kzt {
-  font-size: 10px;
+  font-size: 12px;
   color: #556;
   white-space: nowrap;
 }
 .mymy-ui .kzmn {
   width: 100%;
-  font-size: 11.5px;
+  font-size: 13.5px;
   color: #334;
   margin: 0 0 3px 2px;
 }
@@ -600,7 +600,7 @@
   flex: 1;
   border: 0;
   background: transparent;
-  font-size: 14.5px;
+  font-size: 16.5px;
   outline: none;
   color: #111;
   min-width: 0;
@@ -614,7 +614,7 @@
   align-items: center;
   justify-content: center;
   font-style: normal;
-  font-size: 22px;
+  font-size: 24px;
   color: #111;
 }
 .mymy-ui .kzem {
@@ -626,7 +626,7 @@
   align-items: center;
   justify-content: center;
   font-style: normal;
-  font-size: 15px;
+  font-size: 17px;
   color: #222;
 }
 .mymy-ui .kzinp button {
@@ -635,7 +635,7 @@
   border-radius: 50%;
   border: 0;
   background: #fff;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   cursor: pointer;
   color: #111;
@@ -721,7 +721,7 @@
   justify-content: center;
 }
 .mymy-ui .kzxlg {
-  font-size: 25px;
+  font-size: 27px;
   font-weight: 700;
   line-height: 1;
 }
@@ -736,7 +736,7 @@
 .mymy-ui .kzxtb span {
   flex: 1;
   text-align: center;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
   color: #536471;
   height: 100%;
@@ -753,7 +753,7 @@
 .mymy-ui .kzxtb b {
   position: absolute;
   right: 12px;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 300;
   color: #0f1419;
 }
@@ -780,7 +780,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 14.5px;
+  font-size: 16.5px;
   line-height: 19px;
   white-space: nowrap;
 }
@@ -793,7 +793,7 @@
 }
 .mymy-ui .kzxn small {
   color: #536471;
-  font-size: 14px;
+  font-size: 16px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -804,10 +804,10 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 13px;
+  font-size: 15px;
 }
 .mymy-ui .kzxx {
-  font-size: 15px;
+  font-size: 17px;
   line-height: 20px;
   margin: 2px 0 8px;
   white-space: pre-wrap;
@@ -818,7 +818,7 @@
   justify-content: space-between;
   align-items: center;
   color: #536471;
-  font-size: 12.5px;
+  font-size: 14.5px;
   padding: 2px 0 10px;
   margin-right: 6px;
 }
@@ -828,7 +828,7 @@
   gap: 5px;
   cursor: pointer;
   white-space: nowrap;
-  font-size: 12.5px;
+  font-size: 14.5px;
   font-weight: 400;
   line-height: 1;
 }
