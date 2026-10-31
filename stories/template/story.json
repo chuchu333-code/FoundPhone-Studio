@@ -3,7 +3,7 @@
   "id": "wang-heye-phone",
   "title": "凌晨三点十九分",
   "description": "2026年9月29日，王赫野的手机在凌晨收到一通来电。",
-  "revision": 6,
+  "revision": 7,
   "phone": {
     "owner": "王赫野",
     "date": "2026-09-29",
@@ -1347,24 +1347,9 @@
           "value": "微信：张彬彬：怎么突然挂断了？"
         }
       ],
-      "next": [],
+      "next": ["delay-auto-reply-1"],
       "once": true,
       "x": 500,
-      "y": 80
-    },
-    {
-      "id": "start-auto-replies",
-      "label": "点开彬彬的消息后继续剧情",
-      "type": "event",
-      "event": "read",
-      "target": "bb-after-1",
-      "conditions": [],
-      "actions": [],
-      "next": [
-        "delay-auto-reply-1"
-      ],
-      "once": true,
-      "x": 700,
       "y": 80
     },
     {
@@ -1509,7 +1494,7 @@
   ],
   "tests": [
     {
-      "name": "03:19来电、点击来信并自动发送两条回复",
+      "name": "03:19来电、挂断后立即回复并自动发送后续消息",
       "steps": [
         {
           "advanceMs": 60000
@@ -1521,10 +1506,6 @@
         {
           "event": "callEnded",
           "target": "call-20260929-live"
-        },
-        {
-          "event": "read",
-          "target": "bb-after-1"
         },
         {
           "advanceMs": 4000
