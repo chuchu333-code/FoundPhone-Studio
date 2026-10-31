@@ -102,8 +102,7 @@ for (const [choice, ending] of [
         .click();
       await page
         .getByRole("button", {
-          name: "密码还是我们第一次开会的日期：1023。",
-          exact: true,
+          name: /密码还是我们第一次开会的日期：1023。/,
         })
         .click();
       await home(page);
@@ -171,6 +170,9 @@ test("production PWA cached story works after offline reload", async ({
     await context.setOffline(true);
     await page.reload();
     await page.getByRole("button", { name: "轻触解锁" }).click();
+    for (const key of "0202") {
+      await page.getByRole("button", { name: "密码键" + key, exact: true }).click();
+    }
     await open(page, "设置");
     await expect(page.getByRole("switch", { name: "飞行模式" })).toBeVisible();
     await page
@@ -179,6 +181,18 @@ test("production PWA cached story works after offline reload", async ({
   } finally {
     await context.close();
   }
+});
+
+test("default story Weibo profile uses the account nickname", async ({ page }) => {
+  await page.unroute("**/work.json");
+  await page.goto("/");
+  await page.getByRole("button", { name: "轻触解锁" }).click();
+  for (const key of "0202") {
+    await page.getByRole("button", { name: "密码键" + key, exact: true }).click();
+  }
+  await open(page, "微博");
+  await page.locator(".weibo-sections button").filter({ hasText: "我" }).click();
+  await expect(page.locator(".weibo-profile h2")).toHaveText("赤予");
 });
 
 test("blank phone contains no story or author content", async ({

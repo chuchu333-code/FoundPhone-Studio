@@ -1,6 +1,6 @@
 import { NativeComposer } from "./DeviceSystem";
 import { useSkinState } from "./skinState";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import {
   ChevronLeft,
   Plus,
@@ -97,8 +97,30 @@ function MessageList({
   onRead: (id: string) => void;
   whatsapp?: boolean;
 }) {
+  const list = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const element = list.current;
+    if (!element) return;
+    const scrollToLatest = () => {
+      element.scrollTop = element.scrollHeight;
+    };
+    scrollToLatest();
+    const frame = requestAnimationFrame(scrollToLatest);
+    const pendingImages = Array.from(element.querySelectorAll("img")).filter(
+      (image) => !image.complete,
+    );
+    pendingImages.forEach((image) =>
+      image.addEventListener("load", scrollToLatest, { once: true }),
+    );
+    return () => {
+      cancelAnimationFrame(frame);
+      pendingImages.forEach((image) =>
+        image.removeEventListener("load", scrollToLatest),
+      );
+    };
+  }, [items.length]);
   return (
-    <div className={`skin-messages ${whatsapp ? "wa-wallpaper" : ""}`}>
+    <div ref={list} className={"skin-messages " + (whatsapp ? "wa-wallpaper" : "")}>
       {whatsapp && <div className="skin-date">{items[0]?.time.slice(0, 10)}</div>}
       {items.map((i, index) => (
         <Fragment key={i.id}>

@@ -134,6 +134,7 @@ function PhoneRuntime({
   onRuntime?: (s: Runtime) => void;
 }) {
   const [app, setApp] = useState("");
+  const [activeWechatThread, setActiveWechatThread] = useState("");
   const [notificationThread, setNotificationThread] = useState("");
   const [notificationRequest, setNotificationRequest] = useState(0);
   const pendingNotification = useRef<{ appId: string; thread: string } | null>(
@@ -196,13 +197,15 @@ function PhoneRuntime({
   }, [creator, ready]);
   const s = external ?? own;
   const autoTypingMessage = useMemo(() => {
-    const delay = s.scheduled?.find((task) => task.nodeId.startsWith("delay-auto-reply-"));
-    const next = delay && work.nodes.find((node) => node.id === delay.nodeId)?.next[0];
-    const action = next && work.nodes.find((node) => node.id === next)?.actions.find((item) => item.type === "unlock");
-    const message = action
-      ? work.data.wechat?.find((item) => item.id === action.key)
-      : undefined;
-    return message?.outgoing ? message.body : "";
+    for (const task of s.scheduled ?? []) {
+      const next = work.nodes.find((node) => node.id === task.nodeId)?.next[0];
+      const action = next && work.nodes.find((node) => node.id === next)?.actions.find((item) => item.type === "unlock");
+      const message = action
+        ? work.data.wechat?.find((item) => item.id === action.key)
+        : undefined;
+      if (message?.outgoing) return message.body;
+    }
+    return "";
   }, [s.scheduled, work.nodes, work.data.wechat]);
   const autoTypingWasActive = useRef(false);
   useEffect(() => {
@@ -281,7 +284,6 @@ function PhoneRuntime({
           setOwn(saved.state);
         else {
           setOwn(dispatch(work, initialRuntime(work), "start"));
-          if (saved) setLoadError("作品已更新，已开始新的进度。");
         }
         setReady(true);
       })
@@ -339,8 +341,9 @@ function PhoneRuntime({
     for (const id of appSnapshots.current.keys())
       if (!recent.includes(id) && id !== app) appSnapshots.current.delete(id);
   };
-  const open = (id: string) => {
+  const open = (id: string, preserveWechatThread = false) => {
     if (!work.apps.some((a) => a.id === id && a.installed)) return;
+    if (id !== "wechat" || !preserveWechatThread) setActiveWechatThread("");
     setApp(id);
     setKeyboard(false);
     setRecent((v) => [id, ...v.filter((a) => a !== id)].slice(0, 8));
@@ -353,8 +356,9 @@ function PhoneRuntime({
   const apps = installedApps.filter((a) => a.visible);
   const routeToNotification = (route: { appId: string; thread: string }) => {
     setNotificationThread(route.thread);
+    setActiveWechatThread(route.appId === "wechat" ? route.thread : "");
     setNotificationRequest((value) => value + 1);
-    open(route.appId);
+    open(route.appId, true);
   };
   const unlock = (pin = "") => {
     if (!work.phone.passcode || pin === work.phone.passcode) {
@@ -395,13 +399,20 @@ function PhoneRuntime({
   useEffect(() => {
     const count = s.notifications.length;
     if (!locked && work.phone.notifications && count > noticesSeen.current) {
-      setBanner(s.notifications.at(-1) || "");
-      const timer = setTimeout(() => setBanner(""), 4500);
+      const notice = s.notifications.at(-1) || "";
+      const noticeApp = notificationContent(notice, work.apps).appId;
+      const inWechatChat = app === "wechat" && !!activeWechatThread;
       noticesSeen.current = count;
+      if (noticeApp === "wechat" && inWechatChat) {
+        setBanner("");
+        return;
+      }
+      setBanner(notice);
+      const timer = setTimeout(() => setBanner(""), 4500);
       return () => clearTimeout(timer);
     }
     noticesSeen.current = count;
-  }, [s.notifications.length, locked, work.phone.notifications]);
+  }, [s.notifications.length, locked, work.phone.notifications, work.apps, app, activeWechatThread]);
   const dismissNotice = (index: number) =>
     update({
       ...runtimeRef.current,
@@ -566,6 +577,7 @@ function PhoneRuntime({
                   autoTypingMessage={autoTypingMessage}
                   notificationThread={notificationThread}
                   notificationRequest={notificationRequest}
+                  onThreadChange={(thread) => setActiveWechatThread(app === "wechat" ? thread : "")}
                   onRead={(id) => event("read", id)}
                   onEdit={(item) => onEdit?.(app, item)}
                   onAdd={() => onAdd?.(app)}
@@ -998,6 +1010,7 @@ function AppContent({
   onBack,
   onSettings,
   onUi,
+  onThreadChange,
   work,
 }: {
   app: AppPlugin;
@@ -1014,6 +1027,7 @@ function AppContent({
   onBack: () => void;
   onSettings?: () => void;
   onUi?: (key: string, value: UiValue) => void;
+  onThreadChange: (thread: string) => void;
   work: Work;
 }) {
   const [detail, setDetail] = useState<Item | null>(null);
@@ -1054,6 +1068,7 @@ function AppContent({
       return;
     appliedNotificationRequest.current = notificationRequest;
     setThread(notificationThread);
+    onThreadChange(notificationThread);
     const latestIncoming = shown
       .filter(
         (item) =>
@@ -1067,6 +1082,7 @@ function AppContent({
     notificationRequest,
     shown,
     onRead,
+    onThreadChange,
     work.phone.owner,
   ]);
   const chats = [...new Set(shown.map((i) => i.title))];
@@ -1161,7 +1177,10 @@ function AppContent({
               onAdd={onAdd}
               onBack={onBack}
               thread={thread}
-              onThread={setThread}
+              onThread={(nextThread) => {
+                setThread(nextThread);
+                if (app.id === "wechat") onThreadChange(nextThread);
+              }}
             />
           </Suspense>
         </div>

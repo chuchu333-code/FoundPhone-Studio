@@ -3,7 +3,7 @@
   "id": "wang-heye-phone",
   "title": "凌晨三点十九分",
   "description": "2026年9月29日，王赫野的手机在凌晨收到一通来电。",
-  "revision": 5,
+  "revision": 6,
   "phone": {
     "owner": "王赫野",
     "date": "2026-09-29",
@@ -737,6 +737,22 @@
     }
   ],
   "content": {
+    "delivery": [
+      {
+        "id": "delivery-damixiansheng",
+        "title": "大米先生",
+        "body": "现炒小碗菜 · 盖码饭，现炒现做，米饭套餐可选。",
+        "sender": "外卖商家",
+        "time": "2026-09-29 02:58",
+        "kind": "text",
+        "meta": {
+          "address": "附近区域",
+          "rating": "4.8",
+          "duration": "30分钟",
+          "price": "26.8"
+        }
+      }
+    ],
     "weibo": [
       {
         "id": "weibo-0921",
