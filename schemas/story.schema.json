@@ -150,6 +150,10 @@
           "bio": {
             "default": "",
             "type": "string"
+          },
+          "inAddressBook": {
+            "default": true,
+            "type": "boolean"
           }
         },
         "required": [

@@ -25,8 +25,9 @@ import {
   Users,
   Wallet,
 } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { download } from "../io";
+import { KeyboardContext } from "../DeviceSystem";
 import { safeMedia, type Item } from "../schema";
 import {
   Add,
@@ -47,6 +48,11 @@ export function PhoneSkin(p: Props) {
   const [digits, setDigits] = useState(""),
     [call, setCall] = useState("");
   const list = tab === "收藏" ? items.filter((i) => i.favorite) : items;
+  useEffect(() => {
+    if (!call) return;
+    const timer = setTimeout(() => setCall(""), 3000);
+    return () => clearTimeout(timer);
+  }, [call]);
   return (
     <div className="catalog-skin native-phone">
       <Header p={p} />
@@ -103,7 +109,10 @@ export function PhoneSkin(p: Props) {
               <button
                 className={`call-row ${meta(i, "status") === "未接" ? "missed" : ""}`}
                 key={i.id}
-                onClick={() => p.onItem(i)}
+                onClick={() => {
+                  setCall(i.title);
+                  p.onRead(i.id);
+                }}
               >
                 <Phone size={17} />
                 <span>
@@ -131,7 +140,7 @@ export function PhoneSkin(p: Props) {
           <small>虚拟通话</small>
           <Avatar name={call} />
           <h2>{call}</h2>
-          <p>这是作品内的通话模拟</p>
+          <p>正在呼叫，等待接听…</p>
           <button aria-label="挂断" onClick={() => setCall("")}>
             <Phone />
           </button>
@@ -303,8 +312,9 @@ export function CameraSkin(p: Props) {
   );
 }
 export function SafariSkin(p: Props) {
+  const openKeyboard = useContext(KeyboardContext);
   const [q, setQ] = useState(""),
-    [tab, setTab] = useState("书签");
+    [tab, setTab] = useState("历史记录");
   const items = p.items
     .filter((i) =>
       (i.title + i.body + meta(i, "url"))
@@ -341,6 +351,10 @@ export function SafariSkin(p: Props) {
           onChange={(e) => setQ(e.target.value)}
           placeholder="搜索或输入虚构网址"
           aria-label="地址栏"
+          onFocus={() => {
+            setTab("历史记录");
+            openKeyboard(true);
+          }}
           onKeyDown={(e) => {
             if (e.key === "Enter" && items[0]) p.onItem(items[0]);
           }}
@@ -535,7 +549,11 @@ export function MailSkin(p: Props) {
 }
 export function ClockSkin(p: Props) {
   const { tab, setTab, items } = useContent(p, "闹钟");
-  const [enabled, setEnabled] = useSkinState<string[]>(p, "alarms", []),
+  const [enabled, setEnabled] = useSkinState<string[]>(
+      p,
+      "alarms",
+      items.filter((item) => meta(item, "enabled") === "true").map((item) => item.id),
+    ),
     [seconds, setSeconds] = useState(0),
     [running, setRunning] = useState(false);
   useEffect(() => {

@@ -44,6 +44,7 @@ export type SkinProps = {
   onRead: (id: string) => void;
   onItem: (i: Item) => void;
   onAdd: () => void;
+  autoTypingMessage?: string;
   onBack: () => void;
   thread: string;
   onThread: (s: string) => void;
@@ -171,11 +172,19 @@ export function WeChatSkin(p: SkinProps) {
     ),
   ];
   const contacts = [
-    ...new Set(p.items.map((i) => i.sender).filter((s) => s !== "我")),
+    ...new Set(
+      p.items.map((i) => i.sender).filter((s) => s !== "我" && s !== p.owner),
+    ),
   ];
   const posts = p.items.filter(
-    (i) => i.folder === "朋友圈" || i.kind === "post",
+    (i) => (i.folder === "朋友圈" && i.meta.momentsCover !== "true") || i.kind === "post",
   );
+  const momentsCover = p.items.find(
+    (i) => i.meta.momentsCover === "true" && safeMedia(i.media),
+  );
+  const ownerAvatar = p.items.find(
+    (i) => i.sender === p.owner && i.avatar,
+  )?.avatar ?? "";
   return (
     <div
       className="wechat-ui independent-skin"
@@ -287,8 +296,15 @@ export function WeChatSkin(p: SkinProps) {
         </>
       ) : moments ? (
         <div className="wx-moments">
-          <div className="wx-moment-cover">
-            <Camera size={32} />
+          <div
+            className="wx-moment-cover"
+            style={momentsCover ? {
+              backgroundImage: `linear-gradient(#0002, #0005), url("${safeMedia(momentsCover.media)}")`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            } : undefined}
+          >
+            {!momentsCover && <Camera size={32} />}
             <span>朋友圈</span>
           </div>
           {posts.map((i) => (
@@ -297,7 +313,10 @@ export function WeChatSkin(p: SkinProps) {
               className="wx-moment-post"
               onClick={() => p.onItem(i)}
             >
-              <Avatar name={i.sender} />
+              <Avatar
+                name={i.sender}
+                src={p.items.find((item) => item.sender === i.sender && item.avatar)?.avatar}
+              />
               <div>
                 <strong>{i.sender}</strong>
                 <p>{i.body}</p>
@@ -338,7 +357,8 @@ export function WeChatSkin(p: SkinProps) {
                 )
                 .map((t) => {
                   const list = p.items.filter((i) => i.title === t),
-                    last = list.at(-1)!;
+                    last = list.at(-1)!,
+                    contactAvatar = list.find((i) => !i.outgoing && i.avatar)?.avatar || last.avatar;
                   return (
                     <button
                       className="wx-chat-row"
@@ -346,11 +366,14 @@ export function WeChatSkin(p: SkinProps) {
                       onClick={() => {
                         setReadThreads((v) => (v.includes(t) ? v : [...v, t]));
                         p.onThread(t);
-                        p.onRead(t);
+                        const incoming = list.find(
+                          (item) => item.id === "bb-after-1" && !item.outgoing,
+                        );
+                        p.onRead(incoming?.id ?? t);
                       }}
                     >
                       <span className="wx-chat-avatar">
-                        <Avatar name={t} src={last.avatar} />
+                        <Avatar name={t} src={contactAvatar} />
                         {!readThreads.includes(t) &&
                           list.some((i) => !i.read) && (
                             <b className="wx-unread">
@@ -419,7 +442,7 @@ export function WeChatSkin(p: SkinProps) {
           ) : (
             <>
               <div className="wx-profile">
-                <Avatar name={p.owner || "机主"} />
+                <Avatar name={p.owner || "机主"} src={ownerAvatar} />
                 <div>
                   <h2>{p.owner || "机主"}</h2>
                   <small>微信号：未设置</small>

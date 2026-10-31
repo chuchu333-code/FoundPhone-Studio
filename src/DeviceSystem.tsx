@@ -404,10 +404,22 @@ export function ControlCenter({
     </motion.div>
   );
 }
-export function DeviceKeyboard({ close }: { close: () => void }) {
+export function DeviceKeyboard({ close, autoText = "" }: { close: () => void; autoText?: string }) {
   const [value, setValue] = useState(""),
     [shift, setShift] = useState(false),
     [numbers, setNumbers] = useState(false);
+  useEffect(() => {
+    if (!autoText) return;
+    const characters = Array.from(autoText);
+    let index = 0;
+    setValue("");
+    const timer = setInterval(() => {
+      index += 1;
+      setValue(characters.slice(0, index).join(""));
+      if (index >= characters.length) clearInterval(timer);
+    }, Math.max(75, Math.min(165, 720 / characters.length)));
+    return () => clearInterval(timer);
+  }, [autoText]);
   return (
     <div className="device-keyboard" role="dialog" aria-label="屏幕键盘">
       <div className="keyboard-draft">

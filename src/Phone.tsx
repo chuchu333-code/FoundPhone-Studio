@@ -37,6 +37,7 @@ import {
   useEffect,
   useState,
   useRef,
+  useMemo,
   Suspense,
   type CSSProperties,
 } from "react";
@@ -189,6 +190,74 @@ function PhoneRuntime({
     };
   }, [creator, ready]);
   const s = external ?? own;
+  const autoTypingMessage = useMemo(() => {
+    const delay = s.scheduled?.find((task) => task.nodeId.startsWith("delay-auto-reply-"));
+    const next = delay && work.nodes.find((node) => node.id === delay.nodeId)?.next[0];
+    const action = next && work.nodes.find((node) => node.id === next)?.actions.find((item) => item.type === "unlock");
+    const message = action
+      ? work.data.wechat?.find((item) => item.id === action.key)
+      : undefined;
+    return message?.outgoing ? message.body : "";
+  }, [s.scheduled, work.nodes, work.data.wechat]);
+  const autoTypingWasActive = useRef(false);
+  useEffect(() => {
+    if (autoTypingMessage) {
+      autoTypingWasActive.current = true;
+      setKeyboard(true);
+    } else if (autoTypingWasActive.current) {
+      autoTypingWasActive.current = false;
+      setKeyboard(false);
+    }
+  }, [autoTypingMessage]);
+  const [callSubtitleIndex, setCallSubtitleIndex] = useState(-1);
+  const activeCallRecord = s.incomingCall
+    ? work.data.phone?.find((item) => item.id === s.incomingCall?.target)
+    : undefined;
+  const callSubtitleLines = useMemo(() => {
+    const raw = activeCallRecord?.meta.subtitleLines;
+    if (raw) {
+      try {
+        const lines = JSON.parse(raw);
+        if (Array.isArray(lines)) return lines.filter((line): line is string => typeof line === "string");
+      } catch {
+        // Fall back to plain call-record text when no transcript data is present.
+      }
+    }
+    return activeCallRecord?.body.split("\n").filter((line) => line.trim()) ?? [];
+  }, [activeCallRecord?.id, activeCallRecord?.body, activeCallRecord?.meta.subtitleLines]);
+  useEffect(() => {
+    if (s.incomingCall?.status === "answered" && activeCallRecord?.kind === "call")
+      setCallSubtitleIndex(0);
+    else setCallSubtitleIndex(-1);
+  }, [s.incomingCall?.status, s.incomingCall?.target, activeCallRecord?.kind]);
+  useEffect(() => {
+    if (
+      s.incomingCall?.status !== "answered" ||
+      activeCallRecord?.kind !== "call" ||
+      callSubtitleIndex < 0
+    ) return;
+    const line = callSubtitleLines[callSubtitleIndex];
+    if (!line) {
+      setCallSubtitleIndex(-1);
+      const call = runtimeRef.current.incomingCall;
+      if (call?.status === "answered") {
+        update(
+          dispatch(
+            work,
+            { ...runtimeRef.current, incomingCall: null },
+            "callEnded",
+            call.target || call.caller,
+          ),
+        );
+      }
+      return;
+    }
+    const timer = setTimeout(
+      () => setCallSubtitleIndex((index) => index + 1),
+      Math.min(7000, 1700 + line.length * 90),
+    );
+    return () => clearTimeout(timer);
+  }, [s.incomingCall?.status, activeCallRecord?.kind, callSubtitleIndex, callSubtitleLines]);
   const runtimeRef = useRef(s);
   runtimeRef.current = s;
   const update = (next: Runtime) => {
@@ -318,7 +387,13 @@ function PhoneRuntime({
     >
       <KeyboardContext.Provider value={setKeyboard}>
         <div
-          className={`phone-screen wallpaper-${work.phone.wallpaper} ${locked ? "is-locked" : ""} ${app ? "in-app" : ""} ${keyboard ? "keyboard-open" : ""}`}
+          className={`phone-screen wallpaper-${work.phone.wallpaper.startsWith("data:") ? "custom" : work.phone.wallpaper} ${locked ? "is-locked" : ""} ${app ? "in-app" : ""} ${keyboard ? "keyboard-open" : ""}`}
+          style={safeMedia(work.phone.wallpaper) ? {
+            backgroundImage: `url("${safeMedia(work.phone.wallpaper)}")`,
+            backgroundSize: "100% 100%",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          } : undefined}
           data-app={app}
           onDragStart={(e) => e.preventDefault()}
           onPointerDown={(e) => {
@@ -452,6 +527,7 @@ function PhoneRuntime({
                   ]}
                   creator={creator}
                   state={s}
+                  autoTypingMessage={autoTypingMessage}
                   onRead={(id) => event("read", id)}
                   onEdit={(item) => onEdit?.(app, item)}
                   onAdd={() => onAdd?.(app)}
@@ -615,7 +691,9 @@ function PhoneRuntime({
                 作品内模拟
               </small>
               <div className="incoming-avatar">
-                {s.incomingCall.caller.slice(0, 1)}
+                {safeMedia(activeCallRecord?.avatar ?? "") ? (
+                  <img src={safeMedia(activeCallRecord?.avatar ?? "")} alt="" />
+                ) : s.incomingCall.caller.slice(0, 1)}
               </div>
               <h2>{s.incomingCall.caller}</h2>
               {s.incomingCall.status === "answered" &&
@@ -623,10 +701,19 @@ function PhoneRuntime({
                   const record = work.data.phone?.find(
                     (i) => i.id === s.incomingCall?.target,
                   );
-                  return record?.kind === "audio" && safeMedia(record.media) ? (
-                    <audio controls src={safeMedia(record.media)} />
-                  ) : (
-                    <p>这是一通虚构来电。</p>
+                  return (
+                    <>
+                      {record?.kind === "call" && callSubtitleLines[callSubtitleIndex] && (
+                        <div className="call-subtitle" role="status" aria-live="polite">
+                          {callSubtitleLines[callSubtitleIndex]}
+                        </div>
+                      )}
+                      {record?.kind === "audio" && safeMedia(record.media) ? (
+                        <audio controls src={safeMedia(record.media)} />
+                      ) : record?.kind === "call" ? null : (
+                        <p>这是一通虚构来电。</p>
+                      )}
+                    </>
                   );
                 })()}
               <div className="incoming-actions">
@@ -767,7 +854,12 @@ function PhoneRuntime({
               </div>
             </div>
           )}
-          {keyboard && <DeviceKeyboard close={() => setKeyboard(false)} />}
+          {keyboard && (
+            <DeviceKeyboard
+              close={() => setKeyboard(false)}
+              autoText={autoTypingMessage}
+            />
+          )}
           {loadError && (
             <button className="runtime-error" onClick={() => setLoadError("")}>
               {loadError}
@@ -860,6 +952,7 @@ function AppContent({
   items,
   creator,
   state,
+  autoTypingMessage,
   onRead,
   onEdit,
   onAdd,
@@ -873,6 +966,7 @@ function AppContent({
   items: Item[];
   creator: boolean;
   state: Runtime;
+  autoTypingMessage: string;
   onRead: (id: string) => void;
   onEdit: (item: Item) => void;
   onAdd: () => void;
@@ -995,6 +1089,7 @@ function AppContent({
               items={shown}
               creator={creator}
               onRead={onRead}
+              autoTypingMessage={app.id === "wechat" ? autoTypingMessage : undefined}
               onItem={read}
               onAdd={onAdd}
               onBack={onBack}

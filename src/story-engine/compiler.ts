@@ -58,6 +58,7 @@ export const storySchema = z
           phone: z.string().default(""),
           avatar: z.string().default(""),
           bio: z.string().default(""),
+          inAddressBook: z.boolean().default(true),
         }),
       )
       .default([]),
@@ -164,7 +165,7 @@ export function compileStory(raw: unknown): { story: Story; work: Work } {
   s.contacts.forEach((c, n) => {
     if (c.avatar && !safeMedia(c.avatar))
       fail(`contacts.${n}.avatar`, "无效头像");
-    if (installed.has("contacts"))
+    if (installed.has("contacts") && c.inAddressBook)
       add(
         "contacts",
         {
